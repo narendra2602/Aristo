@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+   
+<struts-config>
+
+      
+  <form-beans >   
+  
+         <form-bean name="BranchForm" type="fac.aristo.form.BranchForm"/>          
+         <form-bean name="ProdForm" type="fac.aristo.form.ProductForm"/>                   
+         <form-bean name="LocationForm" type="fac.aristo.form.LocationForm"/>                            
+         <form-bean name="FacRepo1Form" type="fac.aristo.form.FacRepo1Form"/>                                     
+         <form-bean name="FacRepo2Form" type="fac.aristo.form.FacRepo2Form"/>                                              
+         <form-bean name="FacRepo3Form" type="fac.aristo.form.FacRepo3Form"/>                                              
+         <form-bean name="FacRepo4Form" type="fac.aristo.form.FacRepo4Form"/>                                              
+         <form-bean name="FacRepo5Form" type="fac.aristo.form.FacRepo5Form"/>                                                       
+
+  </form-beans> 
+
+  <global-exceptions />      
+  <global-forwards />   
+  
+<action-mappings >   
+  
+  
+  
+<!-- ******************* Report Start Here ****************************** -->
+      <action  
+	      path="/FactoryOptRepo1" 
+	      name="FacRepo1Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/factory_jsp/OptRepo1.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action  
+	      path="/FactoryListRepo1" 
+	      name="FacRepo1Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/factory_jsp/Repo1List.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>      
+      <action  
+	      path="/FactoryAjxRepo1" 
+	      name="FacRepo1Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/factory_jsp/Fac_name.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+
+      <action  
+	      path="/FactoryOptRepo2" 
+	      name="FacRepo2Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/factory_jsp/OptRepo2.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action  
+	      path="/FactoryListRepo2" 
+	      name="FacRepo2Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/factory_jsp/Repo2List.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>      
+      <action  
+	      path="/FactoryAjxRepo2" 
+	      name="FacRepo2Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/factory_jsp/Fac_name.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+
+      
+      <action  
+	      path="/FactoryOptRepo3" 
+	      name="FacRepo3Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/factory_jsp/OptRepo3.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action  
+	      path="/FactoryListRepo3" 
+	      name="FacRepo3Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/factory_jsp/Repo3List.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>  
+      <action  
+	      path="/FactoryAjxRepo3" 
+	      name="FacRepo3Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/factory_jsp/Fac_name.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+          
+
+      <action  
+	      path="/FactoryOptRepo4" 
+	      name="FacRepo4Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/factory_jsp/OptRepo4.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action  
+	      path="/FactoryListRepo4" 
+	      name="FacRepo4Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/factory_jsp/Repo4List.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>  
+      <action  
+	      path="/FactoryAjxRepo4" 
+	      name="FacRepo4Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/factory_jsp/Fac_name.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+          
+
+      <action  
+	      path="/FactoryOptRepo5" 
+	      name="FacRepo5Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/factory_jsp/OptRepo5.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action  
+	      path="/FactoryListRepo5" 
+	      name="FacRepo5Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/factory_jsp/Repo5List.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>  
+      <action  
+	      path="/FactoryAjxRepo5" 
+	      name="FacRepo5Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/factory_jsp/Fac_name.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+          
+      <action  
+	      path="/FactoryAjxRepo5a" 
+	      name="FacRepo5Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/factory_jsp/Prd_name.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+          
+
+      <action  
+	      path="/FactoryAjxRepo5b" 
+	      name="FacRepo5Form" 
+	      parameter="actionRequested"    
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/factory_jsp/Prd_name.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+          
+ 	
+<!-- ******************* Report End Here ****************************** -->
+
+
+
+<!-- ******************* MaStEr Menu Start Here ****************************** -->
+      <action  
+	      path="/ListFBranch" 
+	      name="BranchForm" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryMasterAction">   
+	      <forward name="sucess" path="/factory_jsp/BranchList.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      
+      <action  
+	      path="/ListFProduct" 
+	      name="ProdForm" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryMasterAction">   
+	      <forward name="sucess" path="/factory_jsp/ProductList.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>      
+     <action 
+	      path="/FProdEdit" 
+	      name="ProdForm" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      validate="false"
+	      type="fac.aristo.action.FactoryMasterAction">   
+	      <forward name="sucess" path="/factory_jsp/ProductEdit.jsp" /> 	      
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+     </action>         
+	 <action 
+	    path="/FProdUpdate" 
+	    name="ProdForm" 
+	    parameter = "actionRequested"
+        type="fac.aristo.action.FactoryMasterAction">   
+	    <forward name="sucess" path="/factory_jsp/update_success.jsp" />   
+	    <forward name="fail" path="/jsp/session_exp.jsp" />          	      	      
+     </action>  
+     
+      <action  
+	      path="/ListFLocation" 
+	      name="LocationForm" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="fac.aristo.action.FactoryMasterAction">   
+	      <forward name="sucess" path="/factory_jsp/LocationList.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>      
+
+
+	
+<!-- ******************* MaStEr Menu End Here ****************************** -->
+
+
+ 
+<!-- ******************* Branch Wise Factory Reports Start Here ************************ -->
+ 	 
+ 	 <action  
+	      path="/BranchFactoryOptRepo1" 
+	      name="FacRepo1Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="com.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/jsp/FacOptRepo1.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action  
+	      path="/BranchFactoryListRepo1" 
+	      name="FacRepo1Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="com.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/jsp/FacRepo1List.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action> 
+      <action  
+	      path="/BranchFactoryAjxRepo1" 
+	      name="FacRepo1Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="com.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/jsp/Fac_name.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+
+
+	 <action  
+	      path="/BranchFactoryOptRepo2" 
+	      name="FacRepo2Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="com.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/jsp/FacOptRepo2.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action  
+	      path="/BranchFactoryListRepo2" 
+	      name="FacRepo2Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="com.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/jsp/FacRepo2List.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>      
+      <action  
+	      path="/BranchFactoryAjxRepo2" 
+	      name="FacRepo2Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="com.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/jsp/Fac_name.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+
+      <action  
+	      path="/BranchFactoryOptRepo3" 
+	      name="FacRepo3Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="com.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/jsp/FacOptRepo3.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action  
+	      path="/BranchFactoryListRepo3" 
+	      name="FacRepo3Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="com.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/jsp/FacRepo3List.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>  
+      <action  
+	      path="/BranchFactoryAjxRepo3" 
+	      name="FacRepo3Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="com.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/jsp/Fac_name.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+          
+
+
+     <action  
+	      path="/BranchFactoryOptRepo4" 
+	      name="FacRepo4Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="com.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/jsp/FacOptRepo4.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action  
+	      path="/BranchFactoryListRepo4" 
+	      name="FacRepo4Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="com.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/jsp/FacRepo4List.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>  
+      <action  
+	      path="/BranchFactoryAjxRepo4" 
+	      name="FacRepo4Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="com.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/jsp/Fac_name.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+          
+          
+          
+          
+      <action  
+	      path="/BranchFactoryOptRepo5" 
+	      name="FacRepo5Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="com.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/jsp/FacOptRepo5.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action  
+	      path="/BranchFactoryListRepo5" 
+	      name="FacRepo5Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="com.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/jsp/FacRepo5List.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>  
+      <action  
+	      path="/BranchFactoryAjxRepo5" 
+	      name="FacRepo5Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="com.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/jsp/Fac_name.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+          
+      <action  
+	      path="/BranchFactoryAjxRepo5a" 
+	      name="FacRepo5Form" 
+	      parameter="actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="com.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/jsp/FacPrd_name.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action  
+	      path="/BranchFactoryAjxRepo5b" 
+	      name="FacRepo5Form" 
+	      parameter="actionRequested"    
+	      scope="request"
+	      validate="false"
+	      type="com.aristo.action.FactoryRepoAction">   
+	      <forward name="sucess" path="/jsp/FacPrd_name.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+          
+
+<!-- ******************* Branch Wise Factory Reports End Here ************************ -->
+
+
+
+
+
+</action-mappings>
+
+<message-resources parameter="cen.aristo.resources.ApplicationResources" />
+</struts-config>

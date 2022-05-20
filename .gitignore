@@ -1,0 +1,10 @@
+*.bak
+.classpath
+struts-config.xml
+*.class
+*.swf
+upload/
+central_upload/
+.project
+.settings
+.metadata

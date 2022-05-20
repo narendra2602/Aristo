@@ -1,0 +1,392 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*----------- Button Coding Start Here -------------*/
+.button
+{
+	width:80px;
+	height:22px;
+	font-size:11px;
+    font-weight: bold;
+	font-family:Tahoma;
+	border:none;
+	cursor:pointer;
+	text-align:center;
+	float:center;
+	color:#FFFFFF;
+	background:url(../images/adminbutton.gif) no-repeat center;
+}
+
+/*------------- Button Coding end here --------------*/
+
+
+/*--------------Date Table Start here -----------------*/
+.datetable 
+{
+	border: 0px solid #666;
+	width: 50%;
+	height: 10px;
+	margin: 0px 0px 0px 0px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+
+}
+
+.datetable td
+{
+	padding: 1px 1px 1px 1px;
+	text-align: left;
+	vertical-align: middle; 
+	font-weight:bold;
+}
+
+.datetable th
+{
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	vertical-align: middle; 
+	background-color:#3333CC;
+    color: #FFFFFF;
+	font-weight: bold;
+}
+
+.datetable tr
+{
+background-color:#B4B4EB;
+}
+/*-----------Date Table End here-------------*/
+
+
+
+
+/*--------------Table2 Start here -----------------*/
+.table2 
+{
+	border: 1px solid #666;
+	width: 80%;
+	height: auto;
+	margin: 0px 0px 0px 0px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+.table2 td
+{
+	padding: 2px 4px 10px 4px;
+	text-align: left;
+	vertical-align: middle; 
+	font-weight:bold;
+}
+
+.table2 th
+{
+	padding: 10px 4px 10px 4px;
+	text-align: center;
+	vertical-align: middle; 
+	background-color:#3333CC;
+    color: #FFFFFF;
+	font-weight: bold;
+}
+
+.table2 tr
+{
+background-color:#B4B4EB;
+}
+/*-----------Table2 end here -------------*/
+
+
+/*-----------Table3 Start here -------------*/
+.table3
+{
+	width: 60%;
+	border: 0px solid #666;
+	
+}
+
+.table3 th 
+{
+	padding: 10px 4px 10px 4px;
+	text-align: center;
+	vertical-align: middle; 
+	background-color:#3333CC;
+    color: #FFFFFF;
+	font-weight: bold;
+}
+.table3 tr
+{
+	background-color:#B4B4EB;
+}
+
+.table3 td
+ {
+	padding: 2px 4px 10px 4px;
+	text-align: center;
+	vertical-align: middle; 
+ }
+ 
+/*-----------Table3 for end here -------------*/
+
+
+/*-----------UserTable for Create User Start here -------------*/
+.usertable
+{
+	width: 45%;
+	border: 1px solid #666;
+}
+
+.usertable th 
+{
+	padding: 10px 4px 10px 4px;
+	text-align: center;
+	vertical-align: middle; 
+	background-color:#3333CC;
+    color: #FFFFFF;
+	font-weight: bold;
+}
+
+.usertable tr
+{
+	background-color:#B4B4EB;
+	font-weight: bold;
+
+}
+
+.usertable td
+{
+	padding: 2px 4px 10px 4px;
+	text-align: center;
+	vertical-align: middle; 
+}
+ 
+/*-----------UserTable for Create User end here -------------*/
+
+/*-----------UserTable1 for Change Password -------------*/
+.usertable1
+{
+	width: 45%;
+	border: 1px solid #666;
+}
+
+.usertable1 th 
+{
+	padding: 10px 4px 10px 4px;
+	text-align: center;
+	vertical-align: middle; 
+	background-color:#3333CC;
+    color: #FFFFFF;
+	font-weight: bold;
+}
+
+.usertable1 tr
+{
+	background-color:#B4B4EB;
+	font-weight: bold;
+
+}
+.usertable1 td
+{
+	padding: 0px 0px 0px 0px;
+	text-align: left;
+	vertical-align: middle; 
+}
+
+/*-----------UserTable1 for Change Password end here -------------*/
+
+
+
+
+
+/* yaha par ek table 2 ki class khatam ho rahi he */
+
+body 
+{
+font-family:Tahoma;
+font-size:12px;
+background-color:#EFEEFD;
+
+}
+
+
+table
+{
+	border: 1px solid #666;
+	color:	black;
+	width: 100%;
+	margin: 0px 0px 0px 0px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+}
+
+
+th,td 
+{
+	padding: 2px 4px 2px 4px;
+	text-align: left;
+	vertical-align: top;
+}
+
+td.r,th.r 
+{
+	text-align: right;
+	padding-right: 10px;
+}
+
+thead tr 
+{
+	background-color: #3333CC;
+	color:#FFFFFF;
+}
+
+th.sorted {
+	background-color: #CCCCCC;
+}
+
+th a,th a:visited {
+	color: black;
+	background: #7D7DDF;
+}
+
+th a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+th.sorted a,th.sortable a {
+	background-position: right;
+	display: block;
+	width: 100%;
+}
+
+th.sortable a {
+	background-image: url(../img/arrow_off.png);
+    background-repeat: no-repeat;
+}
+
+th.order1 a {
+	background-image: url(../img/arrow_down.png);
+    background-repeat: no-repeat;
+}
+
+th.order2 a {
+	background-image: url(../img/arrow_up.png);
+    background-repeat: no-repeat;
+}
+
+tr.odd {
+	background-color:#D0D0F2;
+
+	
+}
+
+tr.tableRowEven,tr.even {
+	background-color: #B4B4EB;
+}
+
+.group-1 {
+    font-weight:bold;
+    padding-bottom:10px;
+    border-top:1px solid black;
+}
+.group-2 {
+    font-style:italic;
+    border-top: 1px solid black;
+
+}
+
+.grouped-table tr.even {
+    background-color: #FFDAD4;
+}
+.grouped-table tr.odd {
+    background-color: #FFBAB0;
+}
+
+
+.grandtotal-sum {
+    font-weight:bold;
+    text-align:right;
+}
+.grandtotal-label {
+    border-top: 1px solid white;
+    font-weight: bold;
+}
+
+.grandtotal-row {
+    border-top: 2px solid black;
+}
+
+div.exportlinks {
+	background-color: #B4B4EB;
+	font-weight: bold;
+	border: 1px dotted #999;
+	padding: 2px 4px 2px 4px;
+	margin: 2px 0 10px 0;
+	width: 100%;
+
+
+}
+
+span.export 
+{
+	padding: 0 4px 0px 20px;
+	display: inline;
+	display: inline-block;
+	cursor: pointer;
+}
+
+span.excel {
+	background: url(../images/ico_file_excel.png) no-repeat left;
+}
+
+span.csv {
+	background: url(../images/ico_file_csv.png) no-repeat left;
+}
+
+span.xml {
+	background: url(../images/ico_file_xml.png) no-repeat left;
+}
+
+span.pdf {
+	background: url(../images/ico_file_pdf.png) no-repeat left;
+}
+
+span.rtf {
+	background: url(../images/ico_file_rtf.png) no-repeat left;
+}
+
+SPAN.pagebanner
+{
+    BORDER-RIGHT: #999 1px dotted;
+    PADDING-RIGHT: 4px;
+    BORDER-TOP: #999 1px dotted;
+    MARGIN-TOP: 10px;
+    DISPLAY: block;
+    PADDING-LEFT: 4px;
+    PADDING-BOTTOM: 2px;
+    BORDER-LEFT: #999 1px dotted;
+    WIDTH: 100%;
+    PADDING-TOP: 2px;
+    BORDER-BOTTOM: medium none;
+    background-color: #B4B4EB;
+    font-weight: bold; 
+    color:#000000;
+}
+SPAN.pagelinks
+{
+    BORDER-RIGHT: #999 1px dotted;
+    PADDING-RIGHT: 4px;
+    BORDER-TOP: medium none;
+    DISPLAY: block;
+    PADDING-LEFT: 4px;
+    MARGIN-BOTTOM: -5px;
+    PADDING-BOTTOM: 2px;
+    BORDER-LEFT: #999 1px dotted;
+    WIDTH: 100%;
+    PADDING-TOP: 2px;
+    BORDER-BOTTOM: #999 1px dotted;
+    background-color:  #B4B4EB;
+    color:#000000;
+    font-weight: bold;
+}
+

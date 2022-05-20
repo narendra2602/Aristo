@@ -1,0 +1,1013 @@
+@charset "utf-8";
+/* CSS Document */
+
+.search 
+{
+	border: 1px dotted #666;
+	width: 100%;
+	color:#666666;	
+}
+.search td
+{
+	text-align: left;
+	vertical-align:middle; 
+	font-weight:bold;
+}
+.search tr
+{
+    background-color: #F0F3F4;
+}
+
+
+
+.abded
+{
+	width: 100%;
+	border: 1px solid #666;
+}
+
+.abded th 
+{
+	padding: 4px 4px 4px 4px;
+	text-align: center;
+	vertical-align: middle; 
+	background-color: #07456E;
+    color: #FFFFFF;
+	font-weight: bold;
+}
+
+.abded tr
+{
+	background-color:white;
+	font-weight: bold;
+}
+
+.abded td
+{
+	text-align: center;
+	vertical-align: middle; 
+}
+
+
+
+
+.brselect
+{
+
+	width: 300px;
+	height: 205px;
+	border: 1px solid #666;
+	box-shadow: 0 4px 8px 0 rgba(133, 10, 10, 0.19), 0 6px 20px 0 rgba(133, 10, 10, 0.19);
+	background-color:#07456E;
+	padding: 0 0;
+	top:50%;
+	left: 50%;
+	position: fixed;
+	margin-top: -103px;
+	margin-left: -150px;
+	border-color: #07456E;
+}
+
+
+.brselect-branch
+{
+
+	width: 300px;
+	height: 370px;
+	border: 1px solid #666;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-color:#07456E;
+	padding: 0 0;
+	top:50%;
+	left: 50%;
+	position: fixed;
+	margin-top: -185px;
+	margin-left: -150px;
+	border-color: #07456E;
+}
+
+.brselect-heading{
+	background-color:white;
+	text-align: center;
+	height: 30px;
+	color: #07456E;
+	padding: 2px 0;
+	font-size: 16px;
+
+	
+
+}
+
+.brselect-button{
+	background-color:white;
+	text-align: center;
+	height: 25px;
+	color: #07456E;
+	font-size: 14px;
+	
+	
+	border-width: 0px;
+	border-radius: 5px;
+
+	font-family: Poppins, sans-serif;
+
+	margin-top: 35px;
+	margin-left: 100px;
+
+	width:100px;
+}
+.brselect-button-branch{
+	background-color:white;
+	text-align: center;
+	height: 25px;
+	color: #07456E;
+	font-size: 14px;
+	width:100px;
+	
+	border-width: 0px;
+	border-radius: 5px;
+	margin-top: 25px;
+	
+	font-family: Poppins, sans-serif;
+}
+
+.brselect-button-cover{
+	display: flex;  justify-content:space-between; padding: 0px 40px;
+}
+
+.brselect-options{
+	width:200px;margin-left:50px; font-size: 14px; padding:1px 1px; color: #07456E;
+	margin-top: 45px;
+	font-family: Poppins, sans-serif;
+}
+
+.brselect-options-branch{
+	width:200px;margin-left:50px; font-size: 14px; padding:1px 1px; color: #07456E;
+	margin-top: 35px;
+	font-family: Poppins, sans-serif;
+}
+
+option:hover{
+background: rgb(115, 166, 201);}
+
+
+option:checked {
+
+		
+				box-shadow: 0 0 10px 100px rgb(150, 201, 235) inset;
+			}
+
+option{
+				font-family: Poppins, sans-serif;	
+			}
+select{
+				font-family: Poppins, sans-serif;	
+			}
+
+			
+
+
+
+
+.status 
+{
+border: 1px solid #666;
+width: 100%;
+background-color:#EAF2F8;
+height:46px;
+}
+
+tr.good td 
+{
+color: #ffffff;
+background-color:#283747;
+}
+
+tr.bad td 
+{
+color: #ffffff;
+background-color:#2471A3;
+}
+
+tr.vbad td 
+{
+color: #ffffff;
+background-color:#154360;
+}
+
+
+.button
+{
+	background-color:white;
+	text-align: center;
+	height: 25px;
+	color: #07456E;
+	font-size: 14px;
+	
+	
+	border-width: 0px;
+	border-radius: 5px;
+
+	font-family: Poppins, sans-serif;
+}
+
+.datetable 
+{
+border: 0px solid #666;
+width: 100%;
+height: 10px;
+margin: 0px 0px 0px px;
+
+font-size:12px;
+}
+
+.datetable td
+{
+padding: 1px 1px 1px 1px;
+text-align: left;
+vertical-align: middle; 
+font-weight:bold;
+}
+
+.datetable th
+{
+padding: 0px 0px 0px 0px;
+text-align: center;
+vertical-align: middle; 
+background-color:#DB261B;
+color: #FFFFFF;
+font-weight: bold;
+}
+
+.datetable tr
+{
+background-color:#FFDAD4;
+}
+
+.tablereg 
+{
+	border: 1px solid #666;
+	width: 75%;
+	height: auto;
+	margin: 0px 0px 0px 0px;
+
+	font-size:12px;
+}
+
+.tablereg td
+{
+	padding: 2px 2px 2px 2px;
+	text-align: left;
+	vertical-align: middle; 
+	font-weight:bold;
+}
+
+.tablereg th
+{
+	padding: 10px 4px 10px 4px;
+	text-align: center;
+	vertical-align: middle; 
+	background-color:#07456E;
+    color: #FFFFFF;
+	font-weight: bold;
+}
+
+.tablereg tr
+{
+background-color:#FFDAD4;
+}
+/*-----------Table Register End here -------------*/
+
+/*-----------Table Footer Start here -------------*/
+.footer 
+{
+	border: 0px solid #666;
+	width: 100%;
+	/*height: auto;
+	margin: 0px 0px 0px 0px;*/
+
+
+	font-size:12px;
+	color:#666666;
+
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+
+
+
+}
+
+.footer td
+{
+	padding: 2px 2px 2px 2px;
+	text-align: left;
+	vertical-align: middle; 
+	font-weight:bold;
+}
+
+.footer tr
+{
+background-color:#FFDAD4; 
+}
+/*-----------Table Footer End here -------------*/
+
+.corner
+{
+	background-image:url(../images/mf_date1.gif)
+}
+
+.corner1
+{
+background-image:url(../images/mfbg.jpg);
+color:#000000;
+
+}
+
+
+
+/*-----------Branch Table Start here -------------*/
+.tablebranch 
+{
+	border: 0px;
+	height: auto;
+	margin: 0px 0px 0px 0px;
+
+	font-size:12px;
+}
+
+.tablebranch td
+{
+	padding: 2px 2px 2px 2px;
+	text-align: left;
+	vertical-align: middle; 
+	font-weight:bold;
+}
+
+.tablebranch th
+{
+	padding: 10px 4px 10px 4px;
+	text-align: center;
+	vertical-align: middle; 
+	background-color:#07456E;
+    color: #FFFFFF;
+	font-weight: bold;
+}
+
+.tablebranch tr
+{
+background-color:#FFDAD4;
+}
+/*-----------Branch Table End here -------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------Table2 Start here -------------*/
+.table2 
+{
+	border: 1px solid #F0F3F4;
+	
+	height: auto;
+
+	background-color:#F0F3F4;;
+    color: black;
+	font-size:12px;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+	width:600px;
+margin:auto;
+
+
+}
+
+.table2 td
+{
+	padding: 8px 4px;
+	text-align: left;
+	vertical-align: middle; 
+	
+	
+}
+
+.table2 th
+{
+	padding: 10px 4px 10px 4px;
+	text-align: center;
+	vertical-align: middle; 
+	background-color:white;
+	color: #07456E;
+	font-size: 14px;
+	
+	
+}
+
+
+/*-----------Table2 end here -------------*/
+
+
+/*-----------Table3 Start here -------------*/
+.table3
+{
+	width:100%;
+	border: 0px solid #666;
+	background-color:#F0F3F4;
+   
+	
+}
+
+.table3 th 
+{
+	padding: 10px 4px 10px 4px;
+	text-align: center;
+	vertical-align: middle; 
+
+	font-weight: bold;
+}
+
+
+.table3 td
+ {
+	padding: 2px 4px 10px 4px;
+	text-align: center;
+	vertical-align: middle; 
+	color: black;
+ }
+ 
+/*-----------Table3 for end here -------------*/
+
+
+/*-----------UserTable for Create User Start here -------------*/
+.usertable
+{
+	width: 45%;
+	left:27%;
+	position: fixed;
+	z-index: 1;
+	border: 1px solid #F0F3F4;
+	background-color:#F0F3F4;;
+	
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.usertable th 
+{
+	padding: 10px 4px 10px 4px;
+	text-align: center;
+	vertical-align: middle; 
+	background-color:white;
+	color: #07456E;
+	font-size: 14px;
+
+}
+
+.usertable tr
+{
+	
+
+
+}
+
+.usertable td
+{
+	padding: 10px 4px;
+	text-align: center;
+	vertical-align: middle; 
+	color: black;
+	font-size: 12px;
+}
+ 
+/*-----------UserTable for Create User end here -------------*/
+
+/*-----------UserTable1 for Change Password -------------*/
+.usertable1
+{
+	width: 45%;
+	left:27%;
+	position: fixed;
+	z-index: 1;
+	border: 1px solid #F0F3F4;
+	background-color:#F0F3F4;;
+	
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.usertable1 th 
+{
+	padding: 10px 4px 10px 4px;
+	text-align: center;
+	vertical-align: middle; 
+	background-color:white;
+	color: #07456E;
+	font-size: 14px;
+
+}
+
+.usertable1 tr
+{
+	
+
+
+}
+
+.usertable1 td
+{
+	padding: 10px 4px;
+	text-align: center;
+	vertical-align: middle; 
+	color: black;
+	font-size: 12px;
+}
+
+/*-----------UserTable1 for Change Password end here -------------*/
+
+
+
+/* yaha par ek table 2 ki class khatam ho rahi he */
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+table {
+	border: 1px solid #666;
+	width: 100%;
+	margin: 0px 0px 0px 0px;
+
+	font-size:12px;
+    
+}
+
+th,td {
+	padding: 2px 4px 2px 4px;
+	text-align: left;
+	vertical-align: top;
+}
+
+td.r,th.r {
+	text-align: right;
+	padding-right: 10px;
+}
+
+thead tr {
+	background-color: #07456E;
+	color:#FFFFFF;
+}
+
+th.sorted {
+	background-color: #CCCCCC;
+}
+
+th a,th a:visited {
+	color: black;
+	background: #E25B58;
+}
+
+th a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+th.sorted a,th.sortable a {
+	background-position: right;
+	display: block;
+	width: 100%;
+}
+
+th.sortable a {
+	background-image: url(../img/arrow_off.png);
+    background-repeat: no-repeat;
+}
+
+th.order1 a {
+	background-image: url(../img/arrow_down.png);
+    background-repeat: no-repeat;
+}
+
+th.order2 a {
+	background-image: url(../img/arrow_up.png);
+    background-repeat: no-repeat;
+}
+
+tr.odd 
+{
+	background-color:#EAF2F8;
+}
+
+tr.tableRowEven,tr.even {
+	background-color: #A9CCE3;
+}
+
+.group-1 
+{
+    font-weight:bold;
+    padding-bottom:10px;
+    border-top:1px solid black;
+}
+
+.group-2 
+{
+    font-style:italic;
+    border-top: 1px solid black;
+}
+
+.grouped-table tr.even {
+    background-color: rgb(207, 232, 252);
+}
+.grouped-table tr.odd {
+    background-color: rgb(179, 208, 231);
+}
+
+.grandtotal-sum {
+    font-weight:bold;
+    text-align:right;
+}
+.grandtotal-label {
+    border-top: 1px solid white;
+    font-weight: bold;
+}
+
+.grandtotal-row {
+    border-top: 2px solid black;
+}
+
+div.exportlinks {
+	background-color: #F0F3F4;
+	font-weight: bold;
+	color: black;
+	padding: 2px 4px 2px 4px;
+	margin: 2px 0 10px 0;
+	width: 100%;
+
+
+}
+
+span.export 
+{
+	padding: 0 4px 0px 20px;
+	display: inline;
+	display: inline-block;
+	cursor: pointer;
+}
+
+span.excel {
+	background: url(../images/ico_file_excel.png) no-repeat left;
+}
+
+span.csv {
+	background: url(../images/ico_file_csv.png) no-repeat left;
+}
+
+span.xml {
+	background: url(../images/ico_file_xml.png) no-repeat left;
+}
+
+span.pdf {
+	background: url(../images/ico_file_pdf.png) no-repeat left;
+}
+
+span.rtf {
+	background: url(../images/ico_file_rtf.png) no-repeat left;
+}
+
+
+
+SPAN.pagebanner
+{
+    BORDER-RIGHT: #999 1px dotted;
+    PADDING-RIGHT: 4px;
+    BORDER-TOP: #999 1px dotted;
+    MARGIN-TOP: 10px;
+    DISPLAY: block;
+    PADDING-LEFT: 4px;
+    PADDING-BOTTOM: 2px;
+    BORDER-LEFT: #999 1px dotted;
+    WIDTH: 100%;
+    PADDING-TOP: 2px;
+    BORDER-BOTTOM: medium none;
+    background-color: #F0F3F4;
+    font-weight: bold; 
+    color:#000000;
+}
+SPAN.pagelinks
+{
+    BORDER-RIGHT: #999 1px dotted;
+    PADDING-RIGHT: 4px;
+    BORDER-TOP: medium none;
+    DISPLAY: block;
+    PADDING-LEFT: 4px;
+    MARGIN-BOTTOM: -5px;
+    PADDING-BOTTOM: 2px;
+    BORDER-LEFT: #999 1px dotted;
+    WIDTH: 100%;
+    PADDING-TOP: 2px;
+    BORDER-BOTTOM: #999 1px dotted;
+    background-color: #F0F3F4;
+    color:#000000;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* calendar style */
+
+#calendarDiv 
+{
+	display: block;
+	display: none;
+	position: relative;
+	border: 2px solid #000000;
+	z-index: 2;
+}
+
+#calendarDiv a 
+{
+	cursor: pointer;
+}
+
+#calendar 
+{
+	background:#99FFFF;
+	clear: both;
+	text-align: center;
+	font-size: 12px;
+	
+}
+
+#calendar, #linksTable 
+{
+	width: 190px;
+}
+
+#calendar .calendarHeader 
+{
+	background:#07456E;
+	border-bottom: 2px solid #444;
+	color: #fff;
+	font-size: 12px;
+	
+
+	height:25px;
+	text-align:center;
+
+}
+#calendar .weekDaysTitleRow {
+	background-image: url(../images/datebackmf.gif);
+	color: #fff;
+	font-size: 12px;
+	
+	height:20px;
+	
+}
+#calendar .weekDaysRow {
+	background-color:#07456E;
+	color: #666;
+	height:20px;
+}
+#calendar .weekDaysCell {
+	color: #ffffff;
+	border: 1px solid #ffffff;
+	font-weight:600;
+}
+#calendar .weekDaysCellOver {
+	background: #fff;
+	border: 1px solid #777;
+}
+#closeCalender {
+	position: absolute;
+	top:-06;	
+	right:-06 ;
+	bottom: 100%;
+	margin-bottom: 1px;
+	display: block;
+	padding: 3.5px;
+	cursor: pointer;
+	font-size: 12px;
+}
+#closeCalender:hover {
+	background:#33CC99;
+	color: #fff;
+}
+#linksTable {
+	background:#07456E;
+}
+#linksTable a {
+	display: block;
+	color: #fff;
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-size: 13px;
+	padding: 6px 6px;
+
+
+}
+#linksTable a:hover {
+	background: #ddd;
+	color: #333;
+}
+#prevMonth {
+	float: left;
+}
+#nextMonth {
+	float: right;
+}
+#today {
+	background:#336699;
+}
+
+
+
+.table_opt
+{
+	width: 50%;
+	border: 1px solid #666;
+}
+.table_opt th 
+{
+	padding: 7px 7px 7px 7px;
+	text-align: center;
+	vertical-align: middle; 
+	background-color:#07456E;
+    color: #FFFFFF;
+	font-weight: bold;
+}
+.table_opt tr
+{
+	background-color:#FFDAD4;
+	font-weight: bold;
+}
+.table_opt td
+{
+	padding: 3px;
+	text-align: left;
+	vertical-align: middle; 
+}
+
+ 
+
+
+
+
+body > #wrapper 
+{
+height: auto;
+min-height: 100%;
+}
+
+ #main 
+{
+/*padding-bottom: 150px; /* MUST BE THE SAME HEIGHT VALUE AS THE FOOTER */
+margin-bottom:70px;
+}
+
+
+#header 
+{
+height: 70px; 
+overflow: auto;
+}
+
+
+#content 
+{
+top:50%;
+left:50%;
+position:fixed;
+margin-left: -375px;
+margin-top: -200px;
+}
+
+
+/* NOTE:  ALL HEIGHTS NEED TO BE THE SAME VALUE, INCLUDING THE MINUS VALUE FOR THE STICKY TO STAY IN CORRECT POSITION */
+#fouter {
+position: relative;
+margin-top: -50px; /* negative value of footer height */
+height: 50px;
+background-color:#FFDAD4;
+color: #990033;
+text-align: center;
+vertical-align: middle;
+clear:both;
+
+}
+
+
+/* DO NOT REMOVE THE CLEAR FIX CLASS */
+/* CLEAR FIX to ensure footer stays at bottom of window and any floated content in main content area is cleared */
+.clearfix:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+
+.clearfix {
+display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix {
+height: 1%;
+}
+
+.clearfix {
+display: block;
+}
+
+/* Demo Page Style Remove whats below, its just for show. */
+
+#footero
+{
+    background-color:green;
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    height:30px;
+    margin-bottom:0px;
+}
+
+
+   
+.main-footer{
+    height: 25px;
+    background-color: #07456E;
+    font-size: 9px;
+    display: flex;
+    
+    align-items: center;
+    
+    padding:0 15px;
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+    text-align: left;
+    
+
+    
+    
+ } 
+
+ .main-footer{
+    height: 25px;
+    background-color: #07456E;
+    font-size: 9px;
+    display: flex;
+    
+    align-items: center;
+    
+    padding:0 15px;
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+    text-align: left;
+        
+    
+ } 
+ 
+ /* width */
+ ::-webkit-scrollbar {
+	width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey; 
+	border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #07456E; 
+	border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: rgb(103, 171, 216); 
+  }

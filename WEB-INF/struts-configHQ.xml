@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+   
+<struts-config>
+
+  <form-beans />   
+
+
+  <global-exceptions />      
+  <global-forwards />   
+  
+<action-mappings >   
+  
+  
+  
+<!-- ******************* Report Start Here ****************************** -->
+
+      <action 
+	      path="/HQOptForm4" 
+	      name="MktForm"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQMarketingAction">  
+	      <forward name="sucess" path="/hq_jsp/option_form4.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListForm4" 
+	      name="MktForm" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQMarketingAction">  
+	      <forward name="sucess" path="/hq_jsp/form4.jsp" /> 
+	      <forward name="salesreview" path="/hq_jsp/form4a.jsp" /> 
+	      <forward name="salesreviewbp1" path="/hq_jsp/form4b.jsp" /> 
+	       <forward name="salesreviewbp2" path="/hq_jsp/form4c.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQOptForm5" 
+	      name="MktForm"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQMarketingAction">  
+	      <forward name="sucess" path="/hq_jsp/option_form5.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListForm5" 
+	      name="MktForm" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQMarketingAction">  
+	      <forward name="sucess" path="/hq_jsp/form5.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+      <action 
+	      path="/HQOptForm6" 
+	      name="MktForm"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQMarketingAction">  
+	      <forward name="sucess" path="/hq_jsp/option_form6.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListForm6" 
+	      name="MktForm" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQMarketingAction">  
+	      <forward name="sucess" path="/hq_jsp/form6.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+      <action 
+	      path="/HQOptForm8" 
+	      name="MktForm"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQMarketingAction">  
+	      <forward name="sucess" path="/hq_jsp/option_form8.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListForm8" 
+	      name="MktForm" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQMarketingAction">  
+	      <forward name="sucess" path="/hq_jsp/form8.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+      <action 
+	      path="/HQOptForm10" 
+	      name="MktForm"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQMarketingAction">  
+	      <forward name="sucess" path="/hq_jsp/option_form10.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListForm10" 
+	      name="MktForm" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQMarketingAction">  
+	      <forward name="sucess" path="/hq_jsp/form10.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+       <action 
+	      path="/HQOptForm11" 
+	      name="MktForm"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQMarketingAction">  
+	      <forward name="sucess" path="/hq_jsp/option_form11.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListForm11" 
+	      name="MktForm" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQMarketingAction">  
+	      <forward name="sucess" path="/hq_jsp/form11.jsp" /> 
+	      <forward name="sales" path="/hq_jsp/form7.jsp" /> 
+	      <forward name="target" path="/hq_jsp/form7.jsp" /> 
+	      <forward name="lastyear" path="/hq_jsp/form7.jsp" /> 
+	      <forward name="achievement" path="/hq_jsp/form7.jsp" /> 
+	      <forward name="growth" path="/hq_jsp/form7.jsp" /> 
+	      <forward name="pmr" path="/hq_jsp/form7.jsp" /> 
+	      <forward name="surplus" path="/hq_jsp/form7.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+       <action 
+	      path="/HQOptForm12" 
+	      name="MktForm"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQMarketingAction">  
+	      <forward name="sucess" path="/hq_jsp/option_form12.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListForm12" 
+	      name="MktForm" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQMarketingAction">  
+	      <forward name="sucess" path="/hq_jsp/form12.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+       <action 
+	      path="/HQOptForm13" 
+	      name="MktForm"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQMarketingAction">  
+	      <forward name="sucess" path="/hq_jsp/option_form13.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListForm13" 
+	      name="MktForm" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQMarketingAction">  
+	      <forward name="sucess" path="/hq_jsp/form13.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+ 	
+<!-- ******************* MIS Report Start Here ****************************** -->
+
+       <action 
+	      path="/HQOptRepo2" 
+	      name="Repo2Form"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQRepoAction">  
+	      <forward name="sucess" path="/hq_jsp/option_win.jsp" />   
+	      <forward name="find" path="/jsp/getinfoH.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListRepo2" 
+	      name="Repo2Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQRepoAction">  
+	      <forward name="sucess" path="/hq_jsp/repo2list.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+       <action 
+	      path="/HQOptRepo2a" 
+	      name="Repo2Form"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQRepoAction">  
+	      <forward name="sucess" path="/hq_jsp/option_wina.jsp" />   
+	      <forward name="find" path="/jsp/getinfoH.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListRepo2a" 
+	      name="Repo2Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQRepoAction">  
+	      <forward name="sucess" path="/hq_jsp/repo2alist.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+       <action 
+	      path="/HQOptRepo3" 
+	      name="Repo2Form"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQRepoAction">  
+	      <forward name="sucess" path="/hq_jsp/option_win3.jsp" />   
+	      <forward name="find" path="/jsp/getinfoH.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListRepo3" 
+	      name="Repo2Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQRepoAction">  
+	      <forward name="sucess" path="/hq_jsp/repo3list.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+       <action 
+	      path="/HQOptRepo4" 
+	      name="Repo2Form"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQRepoAction">  
+	      <forward name="sucess" path="/hq_jsp/option_win4.jsp" />   
+	      <forward name="find" path="/jsp/getinfoH.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListRepo4" 
+	      name="Repo2Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQRepoAction">  
+	      <forward name="sucess" path="/hq_jsp/repo4list.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+       <action 
+	      path="/HQOptRepo6" 
+	      name="Repo2Form"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQRepoAction">  
+	      <forward name="sucess" path="/hq_jsp/option_win6.jsp" />   
+	      <forward name="find" path="/jsp/getinfoH.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListRepo6" 
+	      name="Repo2Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQRepoAction">  
+	      <forward name="sucess" path="/hq_jsp/repo6list.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+       <action 
+	      path="/HQOptRepo7" 
+	      name="Repo2Form"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQRepoAction">  
+	      <forward name="sucess" path="/hq_jsp/option_win7.jsp" />   
+	      <forward name="find" path="/jsp/getinfoH.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListRepo7" 
+	      name="Repo2Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQRepoAction">  
+	      <forward name="sucess" path="/hq_jsp/repo7list.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+       <action 
+	      path="/HQOptRepo8" 
+	      name="Repo2Form"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQRepoAction">  
+	      <forward name="sucess" path="/hq_jsp/option_win8.jsp" />   
+	      <forward name="find" path="/jsp/getinfoH.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListRepo8" 
+	      name="Repo2Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQRepoAction">  
+	      <forward name="sucess" path="/hq_jsp/repo8list.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+
+<!-- ******************* Stockiest Report Start Here ****************************** -->
+
+       <action 
+	      path="/HQOptRepo9" 
+	      name="Repo9Form"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQStockiestAction">  
+	      <forward name="sucess" path="/hq_jsp/option_win9.jsp" />   
+	      <forward name="find" path="/jsp/getinfoH.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListRepo9" 
+	      name="Repo9Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQStockiestAction">  
+	      <forward name="sucess" path="/hq_jsp/repo9list.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+       <action 
+	      path="/HQOptRepo10" 
+	      name="Repo10Form"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQStockiestAction">  
+	      <forward name="sucess" path="/hq_jsp/option_win10.jsp" />   
+	      <forward name="find" path="/jsp/getinfoH.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListRepo10" 
+	      name="Repo10Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQStockiestAction">  
+	      <forward name="sucess" path="/hq_jsp/repo10list.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+      <action 
+	      path="/HQOptRepo11" 
+	      name="Repo11Form"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQStockiestAction">  
+	      <forward name="sucess" path="/hq_jsp/option_win11.jsp" />   
+	      <forward name="find" path="/jsp/getinfoH.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListRepo11" 
+	      name="Repo11Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQStockiestAction">  
+	      <forward name="sucess" path="/hq_jsp/repo11list.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+      <action 
+	      path="/HQOptRepo12" 
+	      name="Repo12Form"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQStockiestAction">  
+	      <forward name="sucess" path="/hq_jsp/option_win12.jsp" />   
+	      <forward name="find" path="/jsp/getinfoH.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListRepo12" 
+	      name="Repo12Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQStockiestAction">  
+	      <forward name="sucess" path="/hq_jsp/repo12list.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+      <action 
+	      path="/HQOptRepo13" 
+	      name="Repo13Form"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQStockiestAction">  
+	      <forward name="sucess" path="/hq_jsp/option_win13.jsp" />   
+	      <forward name="find" path="/jsp/getinfoH.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListRepo13" 
+	      name="Repo13Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQStockiestAction"> 
+	      <forward name="sucess" path="/hq_jsp/repo13list.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      
+      
+      <action 
+	      path="/HQOptRepo14" 
+	      name="Repo14Form"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQStockiestAction">  
+	      <forward name="sucess" path="/hq_jsp/option_win14.jsp" />   
+	      <forward name="find" path="/jsp/getinfoH.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListRepo14" 
+	      name="Repo14Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQStockiestAction"> 
+	      <forward name="sucess" path="/hq_jsp/repo14list.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      
+      <action 
+	      path="/HQOptRepo15" 
+	      name="Repo15Form"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQStockiestAction">  
+	      <forward name="sucess" path="/hq_jsp/option_win15.jsp" />   
+	      <forward name="find" path="/jsp/getinfoH.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListRepo15" 
+	      name="Repo15Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQStockiestAction"> 
+	      <forward name="sucess" path="/hq_jsp/repo15list.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      
+      <action 
+	      path="/HQOptRepo16" 
+	      name="Repo16Form"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQStockiestAction">  
+	      <forward name="sucess" path="/hq_jsp/option_win16.jsp" />   
+	      <forward name="find" path="/jsp/getinfoH.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListRepo16" 
+	      name="Repo16Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQStockiestAction"> 
+	      <forward name="sucess" path="/hq_jsp/repo16list.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+ 
+      <action 
+	      path="/HQOptRepo17" 
+	      name="Repo17Form"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQStockiestAction">  
+	      <forward name="sucess" path="/hq_jsp/option_win17.jsp" />   
+	      <forward name="find" path="/jsp/getinfoH.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListRepo17" 
+	      name="Repo17Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQStockiestAction"> 
+	      <forward name="sucess" path="/hq_jsp/repo17list.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+      <action 
+	      path="/HQOptRepo18" 
+	      name="Repo18Form"  
+	      parameter = "actionRequested" 
+	      type="com.aristo.action.HQStockiestAction">  
+	      <forward name="sucess" path="/hq_jsp/option_win18.jsp" />   
+	      <forward name="find" path="/jsp/getinfoH.jsp" />   
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+      <action 
+	      path="/HQListRepo18" 
+	      name="Repo18Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      type="com.aristo.action.HQStockiestAction"> 
+	      <forward name="sucess" path="/hq_jsp/repo18list.jsp" /> 
+	      <forward name="fail" path="/jsp/fail.jsp" />    
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+
+
+
+
+</action-mappings>
+
+<message-resources parameter="cen.aristo.resources.ApplicationResources" />
+</struts-config>

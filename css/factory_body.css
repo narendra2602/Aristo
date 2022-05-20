@@ -1,0 +1,323 @@
+body 
+{
+background: #CCCDFD;
+font-family: Tahoma;
+font-size:12px;
+color:#000000;
+font-weight: bold;
+}
+
+.div1
+{
+width:100%;
+height:395px;
+}
+
+
+.footer
+{
+color:#5B5B5B;
+line-height: 1.5em; 
+padding:10px 0px 10px 0px;	
+text-align:center;
+width:100%;
+height:25px;
+background:#B5CAF4  url(../images/ffooter.png) repeat-y ;
+}
+
+
+.switch 
+{
+border: 1px solid #000000;
+width: 30%;
+height: auto;
+margin: 0px 0px 0px 0px;
+font-size:14px;
+border-spacing:0px;
+}
+
+.switch td
+{
+vertical-align: middle; 
+font-weight:bold;
+text-align:left;
+border-spacing:0;
+}
+
+.switch th
+{
+padding: 6px;
+text-align: center;
+vertical-align: middle;
+background:#6992E4; 
+color:#FFFFFF;
+font-weight: bold;
+font-size:13px;
+}
+
+.switch tr
+{
+background-color:#B1C7F1;
+height:30px;
+}
+
+
+/*-----------Upload Table Start here -------------*/
+
+.upload 
+{
+border: 1px solid #000000;
+width: 45%;
+height: auto;
+margin: 0px 0px 0px 0px;
+border-spacing:0px;
+}
+
+.upload td
+{
+vertical-align: middle; 
+font-weight:bold;
+text-align:left;
+border-spacing:0;
+}
+
+.upload th
+{
+padding: 6px;
+text-align: center;
+vertical-align: middle;
+background:#6992E4; 
+color:#FFFFFF;
+font-weight: bold;
+}
+
+.upload tr
+{
+background-color:#B1C7F1;
+}
+
+
+
+
+
+
+
+.button				
+{ 
+	background: url(../images/button-bg.png) repeat-x top center; 
+	border: 1px solid #2F6B9B;
+	-moz-border-radius: 5px; 
+	padding: 2px; 
+	color: #ffffff; 
+	font-weight: bold;
+	-webkit-border-radius: 5px; 
+	font-size: 13px;  
+	width: 70px; 
+}
+
+.button:hover		
+{ 
+	background: white; 
+	color: black; 
+}
+
+
+
+
+
+table 
+{
+border: 1px solid #000;
+width: 100%;
+margin: 0px 0px 0px 0px;
+font-family:Tahoma;
+font-size:12px;
+font-weight:bold;
+}
+
+th,td 
+{
+padding: 2px 4px 2px 4px;
+text-align: left;
+vertical-align: top;
+}
+
+td.r,th.r 
+{
+text-align: right;
+padding-right: 10px;
+}
+
+thead tr 
+{
+background:#6992E4; 
+color:#FFFFFF;
+}
+
+th.sorted 
+{
+background-color: #CCCCCC;
+}
+
+th a,th a:visited 
+{
+color: black;
+background: #E25B58;
+}
+
+th a:hover 
+{
+text-decoration: underline;
+color: black;
+}
+
+th.sorted a,th.sortable a 
+{
+background-position: right;
+display: block;
+width: 100%;
+}
+
+th.sortable a 
+{
+background-image: url(../img/arrow_off.png);
+background-repeat: no-repeat;
+}
+
+th.order1 a 
+{
+background-image: url(../img/arrow_down.png);
+background-repeat: no-repeat;
+}
+
+th.order2 a {
+	background-image: url(../img/arrow_up.png);
+    background-repeat: no-repeat;
+}
+
+tr.odd 
+{
+	background-color:#B1C7F1;
+}
+
+tr.tableRowEven,tr.even {
+	background-color: #E7FAFE;
+}
+
+.group-1 
+{
+    font-weight:bold;
+    padding-bottom:10px;
+    border-top:1px solid black;
+}
+
+.group-2 
+{
+    font-style:italic;
+    border-top: 1px solid black;
+}
+
+.grouped-table tr.even {
+    background-color: #FFDAD4;
+}
+.grouped-table tr.odd {
+    background-color: #FFBAB0;
+}
+
+.grandtotal-sum {
+    font-weight:bold;
+    text-align:right;
+}
+.grandtotal-label {
+    border-top: 1px solid white;
+    font-weight: bold;
+}
+
+.grandtotal-row {
+    border-top: 2px solid black;
+}
+
+div.exportlinks 
+{
+	background-color:#9DBAEE;
+	font-weight: bold;
+	border: 1px dotted #999;
+	padding: 2px 4px 2px 4px;
+	margin: 2px 0 10px 0;
+	width: 100%;
+	text-align:left;
+}
+
+span.export 
+{
+	padding: 0 4px 0px 20px;
+	display: inline;
+	display: inline-block;
+	cursor: pointer;
+}
+
+span.excel {
+	background: url(../images/ico_file_excel.png) no-repeat left;
+}
+
+span.csv {
+	background: url(../images/ico_file_csv.png) no-repeat left;
+}
+
+span.xml {
+	background: url(../images/ico_file_xml.png) no-repeat left;
+}
+
+span.pdf {
+	background: url(../images/ico_file_pdf.png) no-repeat left;
+}
+
+span.rtf {
+	background: url(../images/ico_file_rtf.png) no-repeat left;
+}
+
+SPAN.pagebanner
+{
+
+	font-size:0px;
+    color:#D7F7FF;
+	text-align:left;
+}
+SPAN.pagelinks
+{
+    BORDER-TOP:#999 1px dotted;
+    BORDER-RIGHT:#999 1px dotted;
+    BORDER-LEFT:#999 1px dotted;
+    BORDER-BOTTOM: #999 1px dotted;
+    DISPLAY: block;
+    MARGIN-BOTTOM: -5px;
+    PADDING-BOTTOM: 2px;
+    WIDTH: 100%;
+    PADDING: 5px 5px 5px 5px;
+    background-color:#9DBAEE;
+    color:#000000;
+    font-weight: bold;
+	text-align:left;
+}
+
+tr.money td {
+color: #000;
+background-color:#8C8CFF;
+font-size:13px;
+}
+
+tr.good td {
+color: #000;
+background-color:#71B8FF;
+}
+
+tr.bad td {
+	color: #000;
+	background-color:#84C1FF;
+}
+
+tr.vbad td {
+	color:#fff ;
+	background-color:#2291FF;
+}
+

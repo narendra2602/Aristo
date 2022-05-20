@@ -1,0 +1,91 @@
+<%@ page language="java" pageEncoding="ISO-8859-1"%>
+<%@taglib uri="/WEB-INF/taglib/struts-html.tld" prefix="html" %>
+
+<html:html>
+
+<head>
+<% 
+	String top = (String) session.getAttribute("top");
+	String footer = (String) session.getAttribute("footer");
+	String css = (String) session.getAttribute("css");
+%>
+
+<link href="css/<%=css%>" rel="stylesheet" type="text/css" />
+
+<script src="js/calendar.js" type="text/javascript" language="javascript"></script>
+<link href="css/calendar.css" rel="stylesheet" type="text/css" />
+
+<jsp:include page="<%=top%>"/> 
+<script type="text/javascript">
+function validateDate()
+    {
+    var SDate = document.forms[0].sdate.value;    	
+    var startDate= new Date(SDate);
+    var validformat=/^\d{2}\/\d{2}\/\d{4}$/ //Basic check for format validity
+ 
+    if(SDate == '')	
+    {
+        alert("Please enter Date");
+		document.forms[0].sdate.focus();
+        return false;
+    }
+
+    if (!validformat.test(SDate))
+	{
+    alert("Invalid Date Format. Please correct and submit again.")
+	return false;
+    }
+}
+</script>
+
+</head>
+	
+<body>
+
+	<div id="calendarDiv"> </div>
+
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <br/>
+<html:form action="CentralInventoryRepo2.do?actionRequested=CentralInventoryRepo2" onsubmit="return validateDate()">
+  
+  <table cellpadding="0" cellspacing="0" class="upload">
+    <tr>
+      <th colspan="2">Near Expiry List </th>
+    </tr>
+	
+	<tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="80">&nbsp;</td>
+      <td width="263">Select Date:
+        <html:text property="sdate" styleClass="calendarSelectDate" style="text-align:center" />  </td>
+      </tr>	
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+	  <div align="center"> 
+	  <html:submit styleClass="button" value="Submit" /> 
+	  &nbsp;
+	  <html:reset styleClass="button" value="Cancel" />
+	  </div>	  </td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+  </table>
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+  </html:form>
+</body>
+<jsp:include page="<%=footer%>"/> 	
+</html:html>

@@ -1,0 +1,106 @@
+/* calendar style */
+
+#calendarDiv 
+{
+	display: block;
+	display: none;
+	position: relative;
+	border: 4px solid #5393D6;
+}
+
+#calendarDiv a 
+{
+	cursor: pointer;
+}
+
+#calendar 
+{
+	background:#99FFFF;
+	clear: both;
+	text-align: center;
+	font-size: 12px;
+	font-family:Tahoma;
+}
+
+#calendar, #linksTable 
+{
+	width: 190px;
+}
+
+#calendar .calendarHeader 
+{
+	background: #336699;
+	border-bottom: 2px solid #444;
+	color: #fff;
+	font-size: 12px;
+	font-family:Tahoma;
+	height:25px;
+	text-align:center;
+
+}
+#calendar .weekDaysTitleRow {
+	background:#666699;
+	color: #fff;
+	font-size: 12px;
+	font-family:Tahoma;
+	height:20px;
+	
+}
+#calendar .weekDaysRow {
+	background-image: url(../images/dateback.gif);
+	color: #666;
+	height:20px;
+}
+#calendar .weekDaysCell {
+	color: #ffffff;
+	border: 1px solid #ffffff;
+	font-weight:600;
+}
+#calendar .weekDaysCellOver {
+	background: #fff;
+	border: 1px solid #777;
+}
+#closeCalender {
+	position: absolute;
+	top:-06;	
+	right:-06 ;
+	bottom: 100%;
+	margin-bottom: 1px;
+	display: block;
+	padding: 3.5px;
+	cursor: pointer;
+	font-size: 12px;
+}
+#closeCalender:hover {
+	background:#33CC99;
+	color: #fff;
+}
+#linksTable {
+	background:#5393D6;
+}
+#linksTable a {
+	display: block;
+	color: #fff;
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-size: 13px;
+	padding: 6px 6px;
+	font-family:Tahoma;
+
+}
+#linksTable a:hover {
+	background: #ddd;
+	color: #333;
+}
+#prevMonth {
+	float: left;
+}
+#nextMonth {
+	float: right;
+}
+#today {
+	background:#336699;
+}
+
+/* Demo Page Style Remove whats below, its just for show. */
+

@@ -1,0 +1,159 @@
+ @import url('https://fonts.googleapis.com/css?family=ABeeZee');
+ 
+ *, *::before, *::after {
+  box-sizing: border-box;
+ 
+ }
+
+ @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+
+
+ body{
+   
+    padding: 0;
+	margin: 0;
+	background-color: #ffffff;
+	font-family: ABeeZee;
+	
+	color: white;
+	min-height: 100vh;
+ }
+
+
+ .full-height-grow{
+    display: flex;
+   flex-direction : column; 
+   background: #850a0a;
+ }
+ .brand-logo-name {
+   margin-left: 1rem;
+   font-size: 30px;
+ }
+
+
+
+
+.container{
+ 
+   margin: 0 auto;
+   flex-grow: 1;
+   position: relative;
+   
+}
+
+  table td{
+     color: black;
+
+  }
+
+
+   .btn{
+	color: #bf0000;
+	background-color: #ffffff;
+   padding: .25rem 0.0rem ;
+   width: 90px;
+	border-radius: .5rem;
+	text-decoration: none;
+   font-size: 18px;
+   outline: none;
+   border: none;
+   cursor: pointer;
+   align-self: center;
+    
+
+   }
+   .btn:hover{
+      background-color: #dd9aaf;
+   }
+
+   .btn:focus{
+      background-color:#d692a7;
+   }
+
+   
+.home-page-circle-2{
+
+   position: absolute;
+   overflow: hidden;
+   width: 15vw;
+   height: 15vw;
+   top:5;
+   right:0;
+    z-index: -1;
+ }
+
+ .home-page-circle-2::before{
+   content: '';
+   transform: translate(20%,-40%);
+   position: absolute;  
+   height: 100%;
+   width: 100%;
+   border-radius: 50%;
+   background-color: rgb(165, 42, 42,0.1);
+
+}
+
+.home-page-square-1{
+
+   position: absolute;
+   width: 10vw;
+   height: 10vw;
+ 
+   background-color: rgb(165, 42, 42,0.1);
+   bottom: 5vw;
+   left: 7.5vw;
+
+ }
+
+.home-page-square-2{
+
+   position: absolute;
+   width: 10vw;
+   height: 10vw;
+ 
+   background-color: rgb(165, 42, 42,0.1);
+   bottom: 10vw;
+   left: 2.5vw;
+
+ }
+
+ .home-page-square-3{
+
+   position: absolute;
+   width: 4vw;
+   height: 4vw;
+ 
+   background-color: rgb(165, 42, 42,0.1);
+   bottom: 16vw;
+   left: 14vw;
+
+ }
+
+
+
+ @media (max-width: 1024px) {
+
+   .daily-billing-table td{
+      font-size: 12px;
+      
+   }
+   .daily-billing-table {
+         width: 70%;
+         left: 15%;
+   }
+
+
+
+#content 
+{
+top:50%;
+left:50%;
+position:fixed;
+margin-left: -425px;
+margin-top: -200px;
+}
+
+
+
+ 
+		

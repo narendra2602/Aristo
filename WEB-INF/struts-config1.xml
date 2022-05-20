@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+   
+<struts-config>
+
+      
+  <form-beans >   
+         <form-bean name="FileUpload" type="cen.aristo.form.StrutsUploadForm"/>
+         <form-bean name="BatchMasterForm" type="cen.aristo.form.BatchMasterForm"/>          
+         <form-bean name="AccountMasterForm" type="cen.aristo.form.AccountMasterForm"/>          
+         
+         <form-bean name="CentralRepo1Form" type="cen.aristo.form.CentralRepo1Form"/>
+         <form-bean name="CentralRepo2Form" type="cen.aristo.form.CentralRepo2Form"/>         
+         <form-bean name="CentralRepo3Form" type="cen.aristo.form.CentralRepo3Form"/>                 
+         <form-bean name="CentralRepo4Form" type="cen.aristo.form.CentralRepo4Form"/>
+         <form-bean name="CentralRepo5Form" type="cen.aristo.form.CentralRepo5Form"/>         
+         <form-bean name="CentralRepo6Form" type="cen.aristo.form.CentralRepo6Form"/>         
+         
+         <form-bean name="InventoryRepo1Form" type="cen.aristo.form.InventoryRepo1Form"/>          
+         <form-bean name="InventoryRepo2Form" type="cen.aristo.form.InventoryRepo2Form"/>          
+         <form-bean name="InventoryRepo5Form" type="cen.aristo.form.InventoryRepo5Form"/>                   
+         <form-bean name="InventoryRepo6Form" type="cen.aristo.form.InventoryRepo6Form"/>                   
+         <form-bean name="InventoryRepo8Form" type="cen.aristo.form.InventoryRepo8Form"/>                            
+         <form-bean name="InventoryRepo9Form" type="cen.aristo.form.InventoryRepo9Form"/>                            
+
+  </form-beans> 
+
+  <global-exceptions />      
+  <global-forwards />   
+  
+<action-mappings >   
+  
+<!-- *******************File Upload Action (Tools) defined here********************* -->
+
+  <action
+       path="/FileUpload"
+       type="cen.aristo.action.StrutsUploadAction"
+       name="FileUpload" 
+       scope="request"
+       validate="true">  
+       <forward name="success" path="/central_jsp/save_data.jsp"/> 
+   </action>
+
+  <action
+       path="/UploadForward"
+       type="cen.aristo.action.StrutsUploadAction"
+       name="FileUpload" 
+       validate="true">  
+       <forward name="success" path="/central_jsp/upload.jsp"/> 
+   </action>
+
+   <action
+       path="/FileUpdateCentral"
+       type="cen.aristo.action.CentralUploadAction"
+       name="FileUpload" 
+       validate="true">  
+       <forward name="success" path="/central_jsp/Home.jsp"/> 
+   </action>
+
+    <action 
+       path="/Changepass1" 
+       name="LoginForm" 
+       parameter = "actionRequested"   
+       validate="false"
+       type="com.aristo.action.LoginAction">  
+       <forward name="sucess" path="/central_jsp/Pass_changed.jsp" /> 
+       <forward name="Factory" path="/factory_jsp/Pass_changed.jsp" />        
+       <forward name="fail" path="/central_jsp/fail.jsp" /> 
+       <forward name="sfail" path="/central_jsp/session_exp.jsp" />          	      	      	                     
+     </action>  
+     
+     <action
+       path="/ChangepassForward1" 
+       name="LoginForm" 
+       parameter = "actionRequested"
+       type="com.aristo.action.LoginAction">
+       <forward name="sucess" path="/central_jsp/Change_pass.jsp" />    
+       <forward name="Factory" path="/factory_jsp/Change_pass.jsp" />           
+       <forward name="sfail" path="/central_jsp/session_exp.jsp" />          	      	      	                
+     </action>     
+
+	<action
+      path="/UserHomeForward1" 
+      name="LoginForm" 
+      parameter = "actionRequested"
+      type="com.aristo.action.LoginAction">
+      <forward name="sucess" path="/central_jsp/Home.jsp" /> 
+      <forward name="Factory" path="/factory_jsp/Home.jsp" />       
+     <forward name="sfail" path="/central_jsp/session_exp.jsp" />          	      	      	                 
+    </action> 
+   
+<!-- *******************End of File Upload Action (Tools)****************************** -->
+
+<!-- ******************* Disptach Menu Start Here ****************************** -->
+    <action 
+	      path="/CentralOptRepo1" 
+	      name="CentralRepo1Form" 
+	      parameter = "actionRequested"
+  	      scope="request"	      
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />  	      
+	      <forward name="sucess" path="/central_jsp/OptRepo1.jsp" /> 
+	</action>
+    <action 
+	      path="/CentralListRepo1" 
+	      name="CentralRepo1Form" 
+	      parameter = "actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sucess" path="/central_jsp/Repo1List.jsp" /> 
+	</action>
+
+    <action 
+	      path="/CentralOptRepo3" 
+	      name="CentralRepo3Form" 
+	      parameter = "actionRequested"
+  	      scope="request"	      
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />  	      
+	      <forward name="sucess" path="/central_jsp/OptRepo3.jsp" /> 
+	</action>
+    <action 
+	      path="/CentralListRepo3" 
+	      name="CentralRepo3Form" 
+	      parameter = "actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sucess" path="/central_jsp/Repo3List.jsp" /> 
+	</action>
+
+    <action 
+	      path="/CentralOptRepo4" 
+	      name="CentralRepo4Form" 
+	      parameter = "actionRequested"
+   	      scope="request"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />  	      
+	      <forward name="sucess" path="/central_jsp/OptRepo4.jsp" /> 
+	</action>
+    <action 
+	      path="/CentralListRepo4" 
+	      name="CentralRepo4Form" 
+	      parameter = "actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sucess" path="/central_jsp/Repo4List.jsp" /> 
+	</action>
+
+
+    <action 
+	      path="/CentralOptRepo5" 
+	      name="CentralRepo5Form" 
+	      parameter = "actionRequested"
+  	      scope="request"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />  	      
+	      <forward name="sucess" path="/central_jsp/OptRepo5.jsp" /> 
+	</action>
+    <action 
+	      path="/CentralListRepo5" 
+	      name="CentralRepo5Form"  
+	      parameter = "actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sucess" path="/central_jsp/Repo5List.jsp" /> 
+	</action>
+
+
+    <action 
+	      path="/CentralOptRepo6" 
+	      name="CentralRepo6Form" 
+	      parameter = "actionRequested"
+  	      scope="request"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />  	      
+	      <forward name="sucess" path="/central_jsp/OptRepo6.jsp" /> 
+	</action>
+    <action 
+	      path="/CentralListRepo6" 
+	      name="CentralRepo6Form" 
+	      parameter = "actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sucess" path="/central_jsp/Repo6List.jsp" /> 
+	</action>
+
+
+<!-- ******************* Disptach Menu End Here ****************************** -->
+
+<!-- ******************* INvEntOry Menu Start Here ****************************** -->
+    <action 
+	      path="/CentralListRepo2" 
+	      name="CentralRepo2Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      validate="false"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sucess" path="/central_jsp/Repo2List.jsp" /> 
+	</action>
+
+
+    <action 
+	      path="/CentralOptInv1" 
+	      name="InventoryRepo1Form" 
+	      parameter = "actionRequested"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />  	      
+	      <forward name="sucess" path="/central_jsp/OptInv1.jsp" /> 
+	</action>
+    <action 
+	      path="/CentralInventoryRepo1"  
+	      name="InventoryRepo1Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      validate="false"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sucess" path="/central_jsp/InvRepo1List.jsp" /> 
+	</action>
+	
+   <action 
+	      path="/CentralOptInv2" 
+	      name="InventoryRepo2Form" 
+	      parameter = "actionRequested"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />  	      
+	      <forward name="sucess" path="/central_jsp/OptInv2.jsp" /> 
+	</action>
+    <action 
+	      path="/CentralInventoryRepo2"  
+	      name="InventoryRepo2Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      validate="false"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sucess" path="/central_jsp/InvRepo2List.jsp" /> 
+	</action>
+
+   <action 
+	      path="/CentralOptInv3" 
+	      name="InventoryRepo2Form" 
+	      parameter = "actionRequested"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />  	      
+	      <forward name="sucess" path="/central_jsp/OptInv3.jsp" /> 
+	</action>
+    <action 
+	      path="/CentralInventoryRepo3"  
+	      name="InventoryRepo2Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      validate="false"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sucess" path="/central_jsp/InvRepo3List.jsp" /> 
+	</action>
+
+
+   <action 
+	      path="/CentralOptInv5" 
+	      name="InventoryRepo5Form" 
+	      parameter = "actionRequested"
+	      scope="request"	      
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />  	      
+	      <forward name="sucess" path="/central_jsp/OptInv5.jsp" /> 
+	</action>
+    <action 
+	      path="/CentralInventoryRepo5"  
+	      name="InventoryRepo5Form" 
+	      parameter = "actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sucess" path="/central_jsp/InvRepo5List.jsp" /> 
+	</action>
+
+
+
+    <action 
+	      path="/CentralOptInv6" 
+	      name="InventoryRepo6Form" 
+	      parameter = "actionRequested"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />  	      
+	      <forward name="sucess" path="/central_jsp/OptInv6.jsp" /> 
+	</action>
+    <action 
+	      path="/CentralInventoryRepo6"  
+	      name="InventoryRepo6Form" 
+	      parameter = "actionRequested"
+	      scope="session"
+	      validate="false"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sucess" path="/central_jsp/InvRepo6List.jsp" /> 
+	</action>
+
+    <action 
+	      path="/CentralOptInv8" 
+	      name="InventoryRepo8Form" 
+	      parameter = "actionRequested"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />  	      
+	      <forward name="sucess" path="/central_jsp/OptInv8.jsp" /> 
+	</action>
+    <action 
+	      path="/CentralInventoryRepo8"  
+	      name="InventoryRepo8Form" 
+	      parameter = "actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sucess" path="/central_jsp/InvRepo8List.jsp" /> 
+	</action>
+
+    <action 
+	      path="/CentralOptInv9" 
+	      name="InventoryRepo9Form" 
+	      parameter = "actionRequested"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />  	      
+	      <forward name="sucess" path="/central_jsp/OptInv9.jsp" /> 
+	</action>
+    <action 
+	      path="/CentralInventoryRepo9"  
+	      name="InventoryRepo9Form" 
+	      parameter = "actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sucess" path="/central_jsp/InvRepo9List.jsp" /> 
+	</action>
+
+    <action 
+	      path="/CentralOptInv10" 
+	      name="InventoryRepo9Form" 
+	      parameter = "actionRequested"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sfail" path="/jsp/session_exp.jsp" />  	      
+	      <forward name="sucess" path="/central_jsp/OptInv10.jsp" /> 
+	</action>
+
+    <action 
+	      path="/CentralInventoryRepo10"  
+	      name="InventoryRepo9Form" 
+	      parameter = "actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="cen.aristo.action.RepoAction">  
+	      <forward name="sucess" path="/central_jsp/InvRepo10List.jsp" /> 
+	</action>
+
+
+<!-- ******************* INvEntOry Menu End Here ****************************** -->
+
+<!-- ******************* MaStEr Menu Start Here ****************************** -->
+      <action  
+	      path="/ListProduct1" 
+	      name="ProductForm" 
+	      parameter = "actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="cen.aristo.action.CentralMasterAction">   
+	      <forward name="sucess" path="/central_jsp/ProductList.jsp" /> 
+	      <forward name="fail" path="/central_jsp/fail.jsp" />    
+	      <forward name="sfail" path="/central_jsp/session_exp.jsp" />          	      	      	      
+      </action>
+
+	  <action 
+	      path="/CUploadStatus" 
+	      name="UploadForm" 
+	      parameter = "actionRequested"
+	      scope="request"	      
+	      validate="false"
+	      type="cen.aristo.action.CentralMasterAction">  
+	      <forward name="sucess" path="/central_jsp/Upload_status.jsp" /> 
+	      <forward name="fail" path="/central_jsp/fail.jsp" /> 
+	     <forward name="sfail" path="/central_jsp/session_exp.jsp" />          	      	      	                                
+	  </action>
+
+      <action 
+	      path="/ListGroupSales1" 
+	      name="GroupSalesForm" 
+	      parameter = "actionRequested"
+	      scope="request"
+	      validate="false"
+	      type="cen.aristo.action.CentralMasterAction">  
+	      <forward name="sucess" path="/central_jsp/GroupSalesList.jsp" /> 
+	      <forward name="fail" path="/central_jsp/fail.jsp" />    
+	      <forward name="sfail" path="/central_jsp/session_exp.jsp" />            	      	      	      
+      </action>
+  
+    <action 
+	      path="/OptBatch" 
+	      name="BatchMasterForm" 
+	      parameter = "actionRequested"
+		  scope="request"  
+	      type="cen.aristo.action.CentralMasterAction">  
+	      <forward name="sucess" path="/central_jsp/Batch_opt.jsp" />  
+	      <forward name="sfail" path="/central_jsp/session_exp.jsp" />  	      
+	</action>
+   <action 
+	      path="/ListBatch"    
+	      name="BatchMasterForm" 
+	      parameter = "actionRequested"
+	      scope="request"
+	      type="cen.aristo.action.CentralMasterAction">  
+	      <forward name="sfail" path="/central_jsp/session_exp.jsp" />  	      
+	      <forward name="sucess" path="/central_jsp/BatchList.jsp" /> 
+	</action>
+
+   <action   
+	      path="/ListAccount1"    
+	      name="AccountMasterForm" 
+	      parameter = "actionRequested"
+	      scope="request"
+	      type="cen.aristo.action.CentralMasterAction">  
+	      <forward name="sfail" path="/central_jsp/session_exp.jsp" />  	      
+	      <forward name="sucess" path="/central_jsp/AccountList.jsp" /> 
+	</action>
+
+
+	
+<!-- ******************* MaStEr Menu End Here ****************************** -->
+
+ 
+
+
+</action-mappings>
+
+<message-resources parameter="cen.aristo.resources.ApplicationResources" />
+</struts-config>

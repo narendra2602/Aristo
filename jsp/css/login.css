@@ -1,0 +1,91 @@
+/*----------- Button Coding Start Here -------------*/
+.button
+{
+	width:80px;
+	height:22px;
+	font-size:11px;
+    font-weight: bold;
+	font-family:Tahoma;
+	border:none;
+	cursor:pointer;
+	text-align:center;
+	float:center;
+	color:#FFFFFF;
+	background:url(../images/loginbutton.gif) no-repeat center;
+}
+
+
+/*------------- Button Coding end here --------------*/
+html, body, #wrapper 
+{
+height: 100%;
+background-color: #FFEFEC;
+background-image: url();
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+
+}
+
+body > #wrapper 
+{
+height: auto;
+min-height: 100%;
+}
+
+ #main 
+{
+padding-bottom: 150px; /* MUST BE THE SAME HEIGHT VALUE AS THE FOOTER */
+}
+
+
+#header 
+{
+height: 70px;
+}
+
+
+#content 
+{
+float:right;
+width: 100%;
+}
+
+
+/* NOTE:  ALL HEIGHTS NEED TO BE THE SAME VALUE, INCLUDING THE MINUS VALUE FOR THE STICKY TO STAY IN CORRECT POSITION */
+#footer {
+position: relative;
+margin-top: -50px; /* negative value of footer height */
+height: 50px;
+background-color:#FFDAD4;
+color: #990033;
+text-align: center;
+vertical-align: middle;
+clear:both;
+
+}
+
+
+/* DO NOT REMOVE THE CLEAR FIX CLASS */
+/* CLEAR FIX to ensure footer stays at bottom of window and any floated content in main content area is cleared */
+.clearfix:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+
+.clearfix {
+display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix {
+height: 1%;
+}
+
+.clearfix {
+display: block;
+}

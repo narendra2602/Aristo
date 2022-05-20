@@ -1,0 +1,318 @@
+body 
+{
+	background-color: #D7F7FF;
+	font-family: Tahoma;
+	font-size:12px;
+	color:#000000;
+	text-align:center;
+	font-weight: bold;
+}
+
+
+/*-----------Head Start here -------------*/					  
+.header 
+{
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 11px;
+	width:100%;
+	height:60px;
+	border:0px;
+	
+}
+.header td
+{
+	border-spacing:0;
+}
+.header tr
+{
+
+}
+
+/*-----------Footer Start here -------------*/					  
+.footer 
+{
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 11px;
+	width:100%;
+	height:60px;
+	border:0px;
+}
+.footer td
+{
+	vertical-align: middle; 
+	font-weight:bold;
+	text-align:center;
+	border-spacing:0;
+}
+.footer tr
+{
+background-image:url(../images/menu1.gif);
+}
+
+/*-----------Head Start here -------------*/					  
+.log 
+{
+	width:100%;
+	height:60px;
+	border:0px;
+}
+.log td
+{
+	border-spacing:0;
+}
+.log tr
+{
+
+}
+
+/*-----------Footer Start here -------------*/					  
+
+
+/*-----------Date Time Table Start here -------------*/					  
+.dtime 
+{
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 11px;
+	background:#176CCB;
+	width:40%;
+	height:20;
+	border:0px;
+	text-align:center;
+	border-collapse:collapse;
+}
+
+
+/*-----------Button Start here -------------*/					  
+.button				
+{ 
+	background: url(../images/button-bg.png) repeat-x top center; 
+	border: 1px solid #2F6B9B;
+	-moz-border-radius: 5px; 
+	padding: 5px; 
+	color: #ffffff; 
+	font-weight: bold;
+	-webkit-border-radius: 5px; 
+	font-size: 13px;  
+	width: 70px; 
+}
+
+.button:hover		
+{ 
+	background: white; 
+	color: black; 
+}
+
+/*-----------Upload Table Start here -------------*/
+
+.upload 
+{
+	border: 1px solid #000000;
+	width: 45%;
+	height: auto;
+	margin: 0px 0px 0px 0px;
+	font-size:12px;
+	border-spacing:0px;
+}
+
+.upload td
+{
+	padding: 2px 4px 10px 4px;
+	text-align: left;
+	vertical-align: middle; 
+	font-weight:bold;
+	text-align:center;
+	border-spacing:0;
+}
+
+.upload th
+{
+	padding: 10px 4px 10px 4px;
+	text-align: center;
+	vertical-align: middle;
+	background-image:url(../images/thead.gif);
+    color: #FFFFFF;
+	font-weight: bold;
+	font-size:14px;
+}
+
+.upload tr
+{
+	background-color:#BBDDFF;
+}
+/*-----------Table2 end here -------------*/
+
+/*-----------Body Main Table Start Here -------------*/
+table 
+{
+	border: 1px solid #000;
+	width: 100%;
+	margin: 0px 0px 0px 0px;
+	font-family:Tahoma;
+	font-size:12px;
+    font-weight:bold;
+}
+
+th,td {
+	padding: 2px 4px 2px 4px;
+	text-align: left;
+	vertical-align: top;
+}
+
+td.r,th.r {
+	text-align: right;
+	padding-right: 10px;
+}
+
+thead tr {
+    background: url(../images/thead.gif) repeat-x top center; 
+	color:#FFFFFF;
+}
+
+th.sorted {
+	background-color: #CCCCCC;
+}
+
+th a,th a:visited {
+	color: black;
+	background: #E25B58;
+}
+
+th a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+th.sorted a,th.sortable a {
+	background-position: right;
+	display: block;
+	width: 100%;
+}
+
+th.sortable a {
+	background-image: url(../img/arrow_off.png);
+    background-repeat: no-repeat;
+}
+
+th.order1 a {
+	background-image: url(../img/arrow_down.png);
+    background-repeat: no-repeat;
+}
+
+th.order2 a {
+	background-image: url(../img/arrow_up.png);
+    background-repeat: no-repeat;
+}
+
+tr.odd 
+{
+	background-color:#BBDDFF;
+}
+
+tr.tableRowEven,tr.even {
+	background-color:#CAE4FF;
+}
+
+.group-1 
+{
+    font-weight:bold;
+    padding-bottom:10px;
+    border-top:1px solid black;
+}
+
+.group-2 
+{
+    font-style:italic;
+    border-top: 1px solid black;
+}
+
+.grouped-table tr.even {
+    background-color: #FFDAD4;
+}
+.grouped-table tr.odd {
+    background-color: #FFBAB0;
+}
+
+.grandtotal-sum {
+    font-weight:bold;
+    text-align:right;
+}
+.grandtotal-label {
+    border-top: 1px solid white;
+    font-weight: bold;
+}
+
+.grandtotal-row {
+    border-top: 2px solid black;
+}
+
+div.exportlinks 
+{
+	background-color: #BBDDFF;
+	font-weight: bold;
+	border: 1px dotted #999;
+	padding: 2px 4px 2px 4px;
+	margin: 2px 0 10px 0;
+	width: 100%;
+	text-align:left;
+}
+
+span.export 
+{
+	padding: 0 4px 0px 20px;
+	display: inline;
+	display: inline-block;
+	cursor: pointer;
+}
+
+span.excel {
+	background: url(../images/ico_file_excel.png) no-repeat left;
+}
+
+span.csv {
+	background: url(../images/ico_file_csv.png) no-repeat left;
+}
+
+span.xml {
+	background: url(../images/ico_file_xml.png) no-repeat left;
+}
+
+span.pdf {
+	background: url(../images/ico_file_pdf.png) no-repeat left;
+}
+
+span.rtf {
+	background: url(../images/ico_file_rtf.png) no-repeat left;
+}
+
+SPAN.pagebanner
+{
+
+	font-size:0px;
+    color:#D7F7FF;
+	text-align:left;
+}
+SPAN.pagelinks
+{
+    BORDER-TOP:#999 1px dotted;
+    BORDER-RIGHT:#999 1px dotted;
+    BORDER-LEFT:#999 1px dotted;
+    BORDER-BOTTOM: #999 1px dotted;
+    DISPLAY: block;
+    MARGIN-BOTTOM: -5px;
+    PADDING-BOTTOM: 2px;
+    WIDTH: 100%;
+    PADDING: 5px 5px 5px 5px;
+    background-color: #BBDDFF;
+    color:#000000;
+    font-weight: bold;
+	text-align:left;
+}
+
+
+/*--------------Body Main Table End Here -------------*/
+
+
+
