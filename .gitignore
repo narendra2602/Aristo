@@ -5,6 +5,5 @@ struts-config.xml
 *.swf
 upload/
 central_upload/
-.project
 .settings
 .metadata
