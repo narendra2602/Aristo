@@ -71,7 +71,7 @@ function enableCombo()
 
  	             <tr>
 					<td colspan="4" style="padding-left: 90px;">Branch &nbsp;&nbsp;
-						<html:select property="depo_code" styleId="mySelect" >
+						<html:select property="depo_code" value="0" styleId="mySelect" >
 						  <html:optionsCollection name="HORepo5Form" property="blist" label="dname" value="dcode" />
 						</html:select>
                     </td>

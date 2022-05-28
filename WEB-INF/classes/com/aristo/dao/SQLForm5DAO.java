@@ -2394,6 +2394,7 @@ public class SQLForm5DAO {
 			{	
 				if (hrprint)
 				{
+					
 					grnm="Group : "+rst1.getString(17)+" - ";
 					pcode=rst1.getInt(6);
 					name = rst1.getString(9)+","+rst1.getString(10);

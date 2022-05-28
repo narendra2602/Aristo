@@ -45,7 +45,7 @@ function toggle1()
 		ele.style.display = "block";
 
 	if(document.getElementById('brCheck').checked) 
-		setTimeout(enableCombo, 750);    
+		setTimeout(enableCombo, 800);    
 
       //alert(document.getElementById("mySelect").value);
 
@@ -72,6 +72,7 @@ document.getElementById("unitSelect").disabled=true;
 
 function disableRadio() 
 {
+
 	document.getElementById("unitSelect").disabled=true;
 	document.getElementById("valueSelect").checked=true;
 } 
@@ -145,7 +146,7 @@ function enableRadio()
 
  	             <tr>
 					<td colspan="4" style="padding-left: 90px;">Branch &nbsp;&nbsp;
-						<html:select property="code" styleId="mySelect" onchange="toggle1();showCustomer(this.value,'NWOptForm5.do?actionRequested=NWOptForm5')">
+						<html:select property="code" value="0" styleId="mySelect" onchange="toggle1();showCustomer(this.value,'NWOptForm5.do?actionRequested=NWOptForm5')">
 						  <html:optionsCollection name="MktForm" property="blist" label="dname" value="dcode" />
 						</html:select>
                     </td>

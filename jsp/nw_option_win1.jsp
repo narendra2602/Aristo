@@ -135,7 +135,7 @@ function enableRadio()
         		</html:select>	
 					
 					
-					</td>
+					</td> 
                   </tr>
                   <tr>
                     <td colspan="5" align="center" valign="bottom"></td>
@@ -143,7 +143,7 @@ function enableRadio()
 
  	            <tr>
 					<td colspan="4" style="padding-left: 70px;text-align: left; width: 55%;"> Branch
-						<html:select property="depo_code" styleId="mySelect">
+						<html:select property="depo_code" value="0" styleId="mySelect">
 						  <html:optionsCollection name="HORepo1Form" property="branchlist" label="dname" value="dcode" />
 						</html:select>
 					</td>

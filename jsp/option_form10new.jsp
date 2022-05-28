@@ -98,7 +98,7 @@ function enableCombo()
 
  	              <tr>
 					<td colspan="4" style="padding-left: 90px;">Branch &nbsp;&nbsp;
-						<html:select property="code" styleId="mySelect" onchange="toggle1();showCustomer(this.value,'NWOptForm10.do?actionRequested=NWOptForm10')">
+						<html:select property="code" value="0" styleId="mySelect" onchange="toggle1();showCustomer(this.value,'NWOptForm10.do?actionRequested=NWOptForm10')">
 						  <html:optionsCollection name="MktForm" property="blist" label="dname" value="dcode" />
 						</html:select>
                     </td>
@@ -116,7 +116,7 @@ function enableCombo()
 
  	             <tr>
 					<td colspan="4" style="padding-left: 90px;">Group  &nbsp;&nbsp;
-						<html:select property="gp_code"  styleId="grpSelect" >
+						<html:select property="gp_code" value="0"  styleId="grpSelect" >
 						  <html:optionsCollection name="MktForm" property="glist" label="nm2" value="qty2"  />
 						</html:select>
                     </td>

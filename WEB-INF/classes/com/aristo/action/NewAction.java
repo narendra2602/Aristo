@@ -56,7 +56,7 @@ public class NewAction extends DispatchAction {
      	SQLOptDAO  ad=new SQLOptDAO(); 
 
  		List branch = ad.getUserBranch(con, uid);
- 		if(branch!=null && utype!=4 && (branch.size()>1 || utype==5))
+ 		if(branch!=null  && (branch.size()>1 || utype==5))
  		{
  			LoginFormBean lf = new LoginFormBean();
  			lf.setDcode(0);
@@ -145,7 +145,7 @@ public ActionForward NWListRepo1(ActionMapping mapping, ActionForm form, HttpSer
 /////////////////////////////// Option Form No. 4 start here//////////////////////////////////////////////	
 public ActionForward NWOptForm4(ActionMapping mapping, ActionForm form, HttpServletRequest req, HttpServletResponse res) throws Exception {
 
-	System.out.println("Calleed List NWoptForm4 Action class");       
+	System.out.println("Calleed List NWoptForm4 Action class and jsp option_form4new.jsp");       
 
 	DataSource datasource = this.getDataSource(req,"userDB"); 
 	Connection con=null;
@@ -174,7 +174,7 @@ public ActionForward NWOptForm4(ActionMapping mapping, ActionForm form, HttpServ
 	List branch = ad.getUserBranch(con, uid);
 	LoginFormBean lf1 = (LoginFormBean) branch.get(0);
 
-	if(branch!=null && utype!=4 && (branch.size()>1 || utype==5))
+	if(branch!=null  && (branch.size()>1 || utype==5))
 	{
 		LoginFormBean lf = new LoginFormBean();
 		lf.setDcode(0);
@@ -266,7 +266,7 @@ public ActionForward NWListForm4(ActionMapping mapping, ActionForm form, HttpSer
 /////////////////////////////// Option Form No. 5 start here//////////////////////////////////////////////	
 public ActionForward NWOptForm5(ActionMapping mapping, ActionForm form, HttpServletRequest req, HttpServletResponse res) throws Exception {
 
-	System.out.println("Calleed List NWoptForm4 Action class");       
+	System.out.println("Calleed List NWoptForm4 Action class and JSP option_form5new.jsp");       
 
 	DataSource datasource = this.getDataSource(req,"userDB"); 
 	Connection con=null;
@@ -295,7 +295,7 @@ public ActionForward NWOptForm5(ActionMapping mapping, ActionForm form, HttpServ
 	List branch = ad.getUserBranch(con, uid);
 	LoginFormBean lf1 = (LoginFormBean) branch.get(0);
 
-	if(branch!=null && utype!=4 && (branch.size()>1 || utype==5))
+	if(branch!=null  && (branch.size()>1 || utype==5))
 	{
 		LoginFormBean lf = new LoginFormBean();
 		lf.setDcode(0);
@@ -391,7 +391,7 @@ public ActionForward NWListForm5(ActionMapping mapping, ActionForm form, HttpSer
 /////////////////////////////// Option Form No. 11 start here//////////////////////////////////////////////	
 public ActionForward NWOptForm11(ActionMapping mapping, ActionForm form, HttpServletRequest req, HttpServletResponse res) throws Exception {
 
-	System.out.println("Calleed List NWoptForm11 Action class");       
+	System.out.println("Calleed List NWoptForm11 Action class and JSP option_form11new.jsp");       
 
 	DataSource datasource = this.getDataSource(req,"userDB"); 
 	Connection con=null;
@@ -419,7 +419,7 @@ public ActionForward NWOptForm11(ActionMapping mapping, ActionForm form, HttpSer
 
 	List branch = ad.getUserBranch(con, uid);
 
-	if(branch!=null && utype!=4 && (branch.size()>1 || utype==5))
+	if(branch!=null  && (branch.size()>1 || utype==5))
 	{
 		LoginFormBean lf = new LoginFormBean();
 		lf.setDcode(0);
@@ -508,7 +508,7 @@ public ActionForward NWListForm11(ActionMapping mapping, ActionForm form, HttpSe
 /////////////////////////////// Option Form No. 3 start here//////////////////////////////////////////////	
 public ActionForward NWOptForm3(ActionMapping mapping, ActionForm form, HttpServletRequest req, HttpServletResponse res) throws Exception {
 
-	System.out.println("Calleed List NWoptForm3 Action class");       
+	System.out.println("Calleed List NWoptForm3 Action class and JSP option_form3new.jsp");       
 
 	DataSource datasource = this.getDataSource(req,"userDB"); 
 	Connection con=null;
@@ -536,7 +536,7 @@ public ActionForward NWOptForm3(ActionMapping mapping, ActionForm form, HttpServ
 
 	List branch = ad.getUserBranch(con, uid);
 
-	if(branch!=null && utype!=4 && (branch.size()>1 || utype==5))
+	if(branch!=null  && (branch.size()>1 || utype==5))
 	{
 		LoginFormBean lf = new LoginFormBean();
 		lf.setDcode(0);
@@ -631,7 +631,7 @@ public ActionForward NWListForm3(ActionMapping mapping, ActionForm form, HttpSer
 /////////////////////////////// Option Form No. 11 start here//////////////////////////////////////////////	
 public ActionForward NWOptRepo5(ActionMapping mapping, ActionForm form, HttpServletRequest req, HttpServletResponse res) throws Exception {
 
-	System.out.println("Calleed List NWOptRepo5 Action class");       
+	System.out.println("Calleed List NWOptRepo5 Action class and JSP new_option_win5.jsp");       
 
 	DataSource datasource = this.getDataSource(req,"userDB"); 
 	Connection con=null;
@@ -659,7 +659,7 @@ public ActionForward NWOptRepo5(ActionMapping mapping, ActionForm form, HttpServ
 
 	List branch = ad.getUserBranch(con, uid);
 
-	if(branch!=null && utype!=4 && (branch.size()>1 || utype==5))
+	if(branch!=null  && (branch.size()>1 || utype==5))
 	{
 		LoginFormBean lf = new LoginFormBean();
 		lf.setDcode(0);
@@ -746,7 +746,7 @@ public ActionForward NWListRepo5(ActionMapping mapping, ActionForm form, HttpSer
 /////////////////////////////// Option Form No. 7 start here//////////////////////////////////////////////	
 public ActionForward NWOptForm7(ActionMapping mapping, ActionForm form, HttpServletRequest req, HttpServletResponse res) throws Exception {
 
-	System.out.println("Calleed List NWOptForm7 Action class");       
+	System.out.println("Calleed List NWOptForm7 Action class and JSP option_form7new.jsp");       
 
 	DataSource datasource = this.getDataSource(req,"userDB"); 
 	Connection con=null;
@@ -774,7 +774,7 @@ public ActionForward NWOptForm7(ActionMapping mapping, ActionForm form, HttpServ
 
 	List branch = ad.getUserBranch(con, uid);
 
-	if(branch!=null && utype!=4 && (branch.size()>1 || utype==5))
+	if(branch!=null  && (branch.size()>1 || utype==5))
 	{
 		LoginFormBean lf = new LoginFormBean();
 		lf.setDcode(0);
@@ -868,7 +868,7 @@ public ActionForward NWListForm7(ActionMapping mapping, ActionForm form, HttpSer
 /////////////////////////////// Option Form No. 8 start here//////////////////////////////////////////////	
 public ActionForward NWOptForm8(ActionMapping mapping, ActionForm form, HttpServletRequest req, HttpServletResponse res) throws Exception {
 
-	System.out.println("Calleed List NWOptForm8 Action class");       
+	System.out.println("Calleed List NWOptForm8 Action class and JSP option_form8new.jsp");       
 
 	DataSource datasource = this.getDataSource(req,"userDB"); 
 	Connection con=null;
@@ -896,7 +896,7 @@ public ActionForward NWOptForm8(ActionMapping mapping, ActionForm form, HttpServ
 
 	List branch = ad.getUserBranch(con, uid);
 
-	if(branch!=null && utype!=4 && (branch.size()>1 || utype==5))
+	if(branch!=null  && (branch.size()>1 || utype==5))
 	{
 		LoginFormBean lf = new LoginFormBean();
 		lf.setDcode(0);
@@ -970,7 +970,7 @@ public ActionForward NWListForm8(ActionMapping mapping, ActionForm form, HttpSer
 /////////////////////////////// Option Form No. 9 start here//////////////////////////////////////////////	
 public ActionForward NWOptForm9(ActionMapping mapping, ActionForm form, HttpServletRequest req, HttpServletResponse res) throws Exception {
 
-	System.out.println("Calleed List NWOptForm9 Action class");       
+	System.out.println("Calleed List NWOptForm9 Action class and JSP option_form9new.jsp");       
 
 	DataSource datasource = this.getDataSource(req,"userDB"); 
 	Connection con=null;
@@ -998,7 +998,7 @@ public ActionForward NWOptForm9(ActionMapping mapping, ActionForm form, HttpServ
 
 	List branch = ad.getUserBranch(con, uid);
 
-	if(branch!=null && utype!=4 && (branch.size()>1 || utype==5))
+	if(branch!=null  && (branch.size()>1 || utype==5))
 	{
 		LoginFormBean lf = new LoginFormBean();
 		lf.setDcode(0);
@@ -1069,7 +1069,7 @@ public ActionForward NWListForm9(ActionMapping mapping, ActionForm form, HttpSer
 /////////////////////////////// Option Form No. 10 start here//////////////////////////////////////////////	
 public ActionForward NWOptForm10(ActionMapping mapping, ActionForm form, HttpServletRequest req, HttpServletResponse res) throws Exception {
 
-	System.out.println("Calleed List NWoptForm10 Action class");       
+	System.out.println("Calleed List NWoptForm10 Action class and JSP option_form10new.jsp");       
 	DataSource datasource = this.getDataSource(req,"userDB"); 
 	Connection con=null;
 
@@ -1099,7 +1099,7 @@ public ActionForward NWOptForm10(ActionMapping mapping, ActionForm form, HttpSer
 	List branch = ad.getUserBranch(con, uid);
 	LoginFormBean lf1 = (LoginFormBean) branch.get(0);
 
-	if(branch!=null && utype!=4 && (branch.size()>1 || utype==5))
+	if(branch!=null  && (branch.size()>1 || utype==5))
 	{
 		LoginFormBean lf = new LoginFormBean();
 		lf.setDcode(0);
@@ -1221,7 +1221,7 @@ public ActionForward NWListForm10(ActionMapping mapping, ActionForm form, HttpSe
 /////////////////////////////// Option Form No. 11 start here//////////////////////////////////////////////	
 public ActionForward NEWOptForm11(ActionMapping mapping, ActionForm form, HttpServletRequest req, HttpServletResponse res) throws Exception {
 
-	System.out.println("Calleed List NEWOptForm11 Action class");       
+	System.out.println("Calleed List NEWOptForm11 Action class and JSP option_form11nw.jsp");       
 
 	DataSource datasource = this.getDataSource(req,"userDB"); 
 	Connection con=null;
@@ -1247,7 +1247,7 @@ public ActionForward NEWOptForm11(ActionMapping mapping, ActionForm form, HttpSe
 
 	List branch = ad.getUserBranch(con, uid);
 
-	if(branch!=null && utype!=4 && (branch.size()>1 || utype==5))
+	if(branch!=null  && (branch.size()>1 || utype==5))
 	{
 		LoginFormBean lf = new LoginFormBean();
 		lf.setDcode(0);

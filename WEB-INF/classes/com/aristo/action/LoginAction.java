@@ -714,7 +714,7 @@ public class LoginAction extends DispatchAction {
   		    	lfb.setD_type("F");
   	       	    lfb.setDiv_code(30);
 
-  		    	session.setAttribute("footer", "footer.jsp");
+  	       	    session.setAttribute("footer", "footer.jsp");
   		    	session.setAttribute("top", "top.jsp");
   		    	session.setAttribute("css", "MF4.css");
   		    	session.setAttribute("menucss", "mf4menu.css");

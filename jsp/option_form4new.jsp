@@ -29,6 +29,7 @@
 <script language="javascript"> 
 
 document.getElementById("hqSelect").disabled=false;
+document.getElementById("mySelect").value="0"
 function toggle1() 
 {
     if(document.getElementById("mySelect").value=="0")
@@ -41,7 +42,7 @@ function toggle1()
 		ele.style.display = "block";
 
 	if(document.getElementById('brCheck').checked) 
-		setTimeout(enableCombo, 750);    
+		setTimeout(enableCombo, 850);    
 } 
 
 function disableCombo() 
@@ -93,10 +94,10 @@ function enableCombo()
                   <tr>
                     <td colspan="5" align="center" valign="bottom"></td>
                   </tr>
-
- 	             <tr>
+  
+ 	             <tr>  
 					<td colspan="4" style="padding-left: 90px;">Branch &nbsp;&nbsp;
-						<html:select property="code" styleId="mySelect" onchange="toggle1();showCustomer(this.value,'NWOptForm4.do?actionRequested=NWOptForm4')">
+						<html:select property="code" value="0" styleId="mySelect" onchange="toggle1();showCustomer(this.value,'NWOptForm4.do?actionRequested=NWOptForm4')">
 						  <html:optionsCollection name="MktForm" property="blist" label="dname" value="dcode" />
 						</html:select>
                     </td>
