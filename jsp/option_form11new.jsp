@@ -78,7 +78,7 @@ function enableCombo()
 					<td>
 						<div id="results">
 					    Group 
-							<html:select property="no_of_mr"  styleId="grpSelect" style="width:180px">
+							<html:select property="no_of_mr" value="0" styleId="grpSelect" style="width:180px">
 							  <html:optionsCollection name="MktForm" property="alist" label="nm2" value="qty2" />
 							</html:select>
 						</div>

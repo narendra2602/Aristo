@@ -95,7 +95,7 @@ function enableBranchCombo()
 					<td>
 						<div id="results">
 					    Group 
-							<html:select property="grp_code"  styleId="grpSelect" style="width:180px">
+							<html:select property="grp_code" value="0" styleId="grpSelect" style="width:180px">
 							  <html:optionsCollection name="HOForm3Form" property="alist" label="nm2" value="qty2" />
 							</html:select>
 						</div>
