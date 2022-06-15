@@ -8,6 +8,7 @@
 
 <% 
 String css2 = (String) session.getAttribute("menucss");
+
 %>
 
 <meta http-equiv="refresh" content="${pageContext.session.maxInactiveInterval};url=jsp/session_exp.jsp">
@@ -27,40 +28,8 @@ String css2 = (String) session.getAttribute("menucss");
     <link href="./css/new/<%=css2%>" rel="stylesheet" type="text/css" />
 	<link href="./css/new/styles.css" rel="stylesheet">
 	
-    <style>
-        
-        .dropdown1 {
-          position: relative;
-          display: inline-block;
-
-        }
-        
-        .dropdown-content {
-          display: none;
-          position: fixed;
-          background-color: #f1f1f1;
-          min-width: 160px;
-
-		  top:50%;
-		  left:30%;
-		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-          z-index: 1;
- 
-		  right: -15px;
-          
-
-        }
-        
-        
-        
-        
-        .dropdown1:hover .dropdown-content {display: block;}
-        
-
-        </style>
 </head>
-<body >
-   
+<body>
         <jsp:include page="header-with-user.jsp" />
 	<!-- start header -->
 	<header>	
@@ -94,7 +63,6 @@ String css2 = (String) session.getAttribute("menucss");
                                 int rindex = rlist.size();
                                 String disp[]=new String [rindex];
                                 String link[]=new String [rindex];
-                                String image[]=new String [rindex];
                                 int ri=0;
                                 int k=0;
                                 boolean flag=false;
@@ -140,7 +108,6 @@ String css2 = (String) session.getAttribute("menucss");
                                     { 
                                         disp[0]=l.getRepo_name();
                                         link[0]=l.getRepo_link();
-                                        image[0]=l.getRepo_image();
                         
                                         ri=1;
                                      }
@@ -154,7 +121,6 @@ String css2 = (String) session.getAttribute("menucss");
                                         {
                                             disp[ri]=l.getRepo_name();
                                             link[ri]=l.getRepo_link();
-                                            image[ri]=l.getRepo_image();
                                             ri++;   
                                         }
                                         else
@@ -167,36 +133,7 @@ String css2 = (String) session.getAttribute("menucss");
                                     for (k=0;k<ri;k++)
                                      {
                             %>
-                                       <li class="dropdown1">
-									     <a href="<%=link[k]%>"><%=k+1%> - <%=disp[k]%> 
-									       <div class="dropdown-content">
-										      <% if (image[k]!=null)
-								             	 {
-								                %>	
-												<img  sizes="(max-width: 400px) 480px,800px" src="data:image/png;base64,<%=image[k]%>"  />
-												 <%   
-													}
-  								                 %>	
-
-										   </div>
-										 </a>
-									   </li>
-
-                                       <!-- <div class="dropdown">
-                                        <button class="dropbtn">Dropdown</button>
-                                        <div class="dropdown-content">
-                                          <a href="#">Link 1</a>
-                                          <a href="#">Link 2</a>
-                                          <a href="#">Link 3</a>
-                                        </div>
-                                      </div> -->
-                                       <!--<li><span class="hiddentxt"><a href="https://upload.wikimedia.org/wikipedia/commons/8/8a/Banana-Single.jpg"><a href="<%=link[k]%>"><%=k+1%> - <%=disp[k]%></a></a></span><span class="hiddenimg"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Banana-Single.jpg" width="250" /></span></li> -->
-                                       <!--<li><a href="<%=link[k]%>" class="hiddentxt"><%=k+1%> - <%=disp[k]%> </a><span class="hiddenimg"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Banana-Single.jpg" width="150" /></span></li> -->
-                                       <!-- <div class="myDIV">
                                        <li><a href="<%=link[k]%>"><%=k+1%> - <%=disp[k]%></a></li>
-                                       </div> -->
-
-                                      
                             <% 
                                      }	
                             %>
@@ -219,8 +156,6 @@ String css2 = (String) session.getAttribute("menucss");
 		</div>
 	</header>	
 	<!-- end header -->
-
-   
 
 
     <!-- javascript

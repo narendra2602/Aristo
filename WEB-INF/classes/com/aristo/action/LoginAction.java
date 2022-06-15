@@ -212,8 +212,12 @@ public class LoginAction extends DispatchAction {
 				  }
 				  f.setDivlist(repo);
 				  fb1.setDivlist(repo);
-/////////////////////set divsion list //////////////////////////////////
-				  
+/////////////////////set message //////////////////////////////////
+				 
+					con=datasource.getConnection();
+					 
+					String msg = rd.getMsg(con,f.getType(),f.getCode(),fb1.getOpt());
+					fb1.setMsg(msg);
 
 /////////////////////// All (MF/TF/Genetica) Condition check/////////////////////////////////				  
 				  
@@ -227,6 +231,8 @@ public class LoginAction extends DispatchAction {
 				  
 /////////////////////// All (MF/TF/Genetica) Condition check/////////////////////////////////				  
 				  
+				  
+				  System.out.println("div type kya hai "+fb1.getD_type()+" messgae "+fb1.getMsg());
 				  if (fb1.getD_type().equals("A") )
 				  {	  
 					  session.setAttribute("footer", "footer.jsp");
@@ -252,22 +258,22 @@ public class LoginAction extends DispatchAction {
 				  {	  
 					  session.setAttribute("footer", "footer.jsp");
  				      session.setAttribute("top", "top.jsp");
- 				      session.setAttribute("css", "MF.css");
- 				      session.setAttribute("menucss", "menu.css");
+ 				      session.setAttribute("css", "MF2.css");
+ 				      session.setAttribute("menucss", "mf2menu.css");
 				  }    
 				  else if (fb1.getD_type().equals("B"))
 				  {	  
 					  session.setAttribute("footer", "footer.jsp");
  				      session.setAttribute("top", "top.jsp");
- 				      session.setAttribute("css", "MF.css");
- 				      session.setAttribute("menucss", "menu.css");
+ 				      session.setAttribute("css", "MF3.css");
+ 				      session.setAttribute("menucss", "mf3menu.css");
 				  }    
 				  else
 				  {
 					  session.setAttribute("footer", "footer.jsp");
  				      session.setAttribute("top", "top.jsp");
- 				      session.setAttribute("css", "MF.css");
- 				      session.setAttribute("menucss", "menu.css");
+ 				      session.setAttribute("css", "MF4.css");
+ 				      session.setAttribute("menucss", "mf4menu.css");
 				  }
 
 				  if (fb1.getType().equals("HO")) 
@@ -277,7 +283,7 @@ public class LoginAction extends DispatchAction {
 						List tab=rd.getTabMenu(con, fb1.getId());
 						con=datasource.getConnection();
 						List repo1=rd.getRepoMenu(con, fb1.getId());
-						fb1.setMsg("");
+//						fb1.setMsg("");
 						session.setAttribute("tablist", tab);
 						session.setAttribute("repolist", repo1);
 						session.setAttribute("Login", fb1);
@@ -291,7 +297,7 @@ public class LoginAction extends DispatchAction {
 						List tab=rd.getTabMenu(con, fb1.getId());
 						con=datasource.getConnection();
 						List repo1=rd.getRepoMenu(con, fb1.getId());
-						fb1.setMsg("");
+//						fb1.setMsg("");
 						session.setAttribute("tablist", tab);
 						session.setAttribute("repolist", repo1);
 						session.setAttribute("Login", fb1);
@@ -375,6 +381,8 @@ public class LoginAction extends DispatchAction {
 					  tp="M";
 				  if (f.getAccess_t().equals("MF3"))
 					  tp="B";
+				  if (f.getAccess_t().equals("MF4"))
+					  tp="F";
 				  req.setAttribute("tp", tp);
 
 				  return mapping.findForward("PMT");
@@ -400,6 +408,8 @@ public class LoginAction extends DispatchAction {
 					  tp="P";
 				  else if (f.getAccess_t().equals("MF3"))
 					  tp="B";
+				  else if (f.getAccess_t().equals("MF4"))
+					  tp="F";
 				  req.setAttribute("tp", tp);
 
 				  return mapping.findForward("HQ");
@@ -638,8 +648,8 @@ public class LoginAction extends DispatchAction {
 		    {
 		    	  session.setAttribute("footer", "footer.jsp");
 			      session.setAttribute("top", "adminmf_top.jsp");
-			      session.setAttribute("css", "MF.css");
-			      session.setAttribute("menucss", "menu.css");
+			      session.setAttribute("css", "MF4.css");
+			      session.setAttribute("menucss", "mf4menu.css");
 		    }
 
 	        	  session.setAttribute("Login", lfb);
@@ -1205,7 +1215,7 @@ public class LoginAction extends DispatchAction {
             int cd=f.getCode();
             String tp=lfb.getD_type();
             
-            System.out.println("afer branch selection tp is "+lfb.getD_type());
+            System.out.println("afer branch selection tp is "+lfb.getD_type()+" opt type "+lfb.getOpt());
             
             
             
@@ -1215,7 +1225,7 @@ public class LoginAction extends DispatchAction {
 			lfb.setBranch_name(bname);
 			
 			con=datasource.getConnection();
-			String msg = rd.getMsg(con,tp,cd);
+			String msg = rd.getMsg(con,tp,cd,lfb.getOpt());
 			lfb.setMsg(msg);
 
 			

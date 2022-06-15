@@ -36,8 +36,13 @@ public class MktFormBean implements Serializable {
 	private int qty9;
 	private int qty10;
 	private int qty11;
+	private int qty12;
+	private int qty13;
 	private int uv;
 	private int color;
+	
+	
+
 	
     private float val1[];
     private double val2;
@@ -62,6 +67,10 @@ public class MktFormBean implements Serializable {
     private double dval9;
     private double dval10;
     private double dval11;
+    private double dval12;
+    private double dval13;
+    private double dval14;
+    private double dval15;
     
     // Report8 Trend Variables
     private String name;
@@ -244,8 +253,93 @@ public class MktFormBean implements Serializable {
 	public void setQty9(int qty9) {
 		this.qty9 = qty9;
 	}
-//////////// Array ke liye//////////////
 	
+	public int getQty12() {
+		return qty12;
+	}
+
+	public void setQty12(int qty12) {
+		this.qty12 = qty12;
+	}
+
+
+	public int getQty13() {
+		return qty13;
+	}
+
+	public void setQty13(int qty13) {
+		this.qty13 = qty13;
+	}
+
+
+
+////////////Array ke liye//////////////
+
+
+	public double getDval12() {
+		return dval12;
+	}
+
+
+
+
+
+	public void setDval12(double dval12) {
+		this.dval12 = dval12;
+	}
+
+
+
+
+
+	public double getDval13() {
+		return dval13;
+	}
+
+
+
+
+
+	public void setDval13(double dval13) {
+		this.dval13 = dval13;
+	}
+
+
+
+
+
+	public double getDval14() {
+		return dval14;
+	}
+
+
+
+
+
+	public void setDval14(double dval14) {
+		this.dval14 = dval14;
+	}
+
+
+
+
+
+	public double getDval15() {
+		return dval15;
+	}
+
+
+
+
+
+	public void setDval15(double dval15) {
+		this.dval15 = dval15;
+	}
+
+
+
+
+
 	public float getVal1(int index) {
 		return val1[index];
 	}

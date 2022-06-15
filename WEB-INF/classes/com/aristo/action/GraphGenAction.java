@@ -112,8 +112,8 @@ public class GraphGenAction extends DispatchAction {
             
 	        res.setContentType("image/png");
 	        
-//	        ChartUtilities.writeChartAsPNG(out, chart, 850, 400);
-	        ChartUtilities.writeChartAsPNG(out, null, 850, 400);
+	        ChartUtilities.writeChartAsPNG(out, chart, 850, 400);
+//	        ChartUtilities.writeChartAsPNG(out, null, 850, 400);
 
            } 
            catch (Exception e) 

@@ -22,6 +22,8 @@ body {
 
 .marquee-msg{
   color:#585B58 ;
+  font-size:18px;
+  font-weight: bold;
 }
 
 

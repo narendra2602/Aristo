@@ -25,6 +25,8 @@ body {
 
 .marquee-msg{
   color:#325E32;
+  font-size:18px;
+  font-weight: bold;
 }
 
 .top-section

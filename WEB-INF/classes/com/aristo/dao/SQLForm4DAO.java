@@ -2119,7 +2119,7 @@ public class SQLForm4DAO {
 					{
 					 rfb = new MktFormBean();
 					 rfb.setMname("VALUE OF "+grnm);
-		             rfb.setColor(2);
+		             rfb.setColor(3);
 	        		 rfb.setQty2((int)(gmontar+.50));
 	        		 rfb.setQty3((int)(gmonsal+.50));
 	        		 rfb.setQty4((int)gmonach);
@@ -2398,6 +2398,333 @@ public class SQLForm4DAO {
 			}
 		return data;
 	}
+
+	public List getNewBranch12(Connection con, int uv,int hq_code,int smon,int emon,int eyear,int depo_code,int div_code,int uid,int utype) { 
+		 
+		MktFormBean rfb;
+        CallableStatement cs=null;
+        ResultSet rst1=null;
+		PreparedStatement ps1=null;
+		ResultSet rs1=null;
+
+
+		List<MktFormBean> data = new ArrayList<MktFormBean>();
+		try {     
+             
+            String tblnm=null;
+            String tblnm3=null;
+            String txt1=null;
+            String txt2=null;
+            String txt3=null;
+            String txt5=null;
+            String txt6=null;
+/////////////////Product Ke liye////////////////////            
+            double montar=0.00;
+            double cumtar=0.00;
+            double monsal=0.00;
+            double monlys=0.00;
+            double cumsal=0.00;
+            double lstsal=0.00;
+            double monach=0.00;
+            double mongth=0.00;
+            double cumach=0.00;
+            double cumgth=0.00;
+            double pmr=0.00;
+            double monpmr=0.00;
+
+
+            
+////////////////Grand Total Ke liye//////////////
+            double tmontar=0.00;
+            double tcumtar=0.00;
+            double tmonsal=0.00;
+            double tcumsal=0.00;
+            double tlstsal=0.00;
+            double tlstmon=0.00;
+            double tmonach=0.00;
+            double tcumach=0.00;
+            double tcumgth=0.00;
+            double tmongth=0.00;
+            double tpmr=0.00;
+
+            double timonsd=0;
+            double ticumsd=0; 
+            int trep=0;
+            double imonsd=0;
+            double icumsd=0;
+
+            if (smon>emon)
+            	emon=smon;
+            
+            String procedureWithParameters="{call web_salesreview_sp1(?,?,?,?,?,?,?,?)}";
+          
+
+           
+            String branchname = "Select depo_name from branch_comp where depo_code=? ";
+            if(hq_code>0)
+            	branchname = "Select ter_name from hqmast where mkt_year=? and div_code=? and  depo_code=? and ter_code=?";
+
+            
+            ps1=con.prepareStatement(branchname);
+            if(hq_code>0)
+            {
+            	ps1.setInt(1, eyear);
+            	ps1.setInt(2, div_code);
+            	ps1.setInt(3, depo_code);
+            	ps1.setInt(4, hq_code);
+            }
+            else
+             ps1.setInt(1, depo_code);
+
+            rs1=ps1.executeQuery();
+            if(rs1.next())
+            {
+//            	txt1=rs1.getString(1)+ " Branch  ";
+            	txt1=(hq_code>0?"HQ :-> ":"Branch :-> ")+rs1.getString(1);
+            }
+            else
+            	txt1="All India  ";
+           
+            rs1.close();
+            ps1.close();
+
+
+            
+            
+            txt3="VALUE-WISE";
+            
+ //             txt2="     PRODUCT WISE /"+txt3+ " DETAIL FROM ";
+              
+              txt2="     MONTH WISE DETAIL  ";
+                
+              System.out.println("mktyear "+eyear+" div "+div_code+" depo "+depo_code+" utype "+utype+" login id  "+uid+" hqcode "+hq_code);
+              System.out.println(procedureWithParameters);
+              
+
+    			
+
+		             
+		            if(depo_code>0 && utype==4)  // hq
+		               utype=41;
+		            if(depo_code>0 && utype==3)  // pmt
+			               utype=31;
+		            else if(depo_code>0)
+		            	utype=1;
+					
+					cs  = con.prepareCall(procedureWithParameters);
+					cs.setInt(1, eyear);
+					cs.setInt(2, div_code);
+					cs.setInt(3, depo_code);
+					cs.setInt(4, smon);
+					cs.setInt(5, emon);
+					cs.setInt(6, utype);
+					cs.setInt(7, uid);
+					cs.setInt(8, hq_code);
+
+
+					rst1 = cs.executeQuery();
+
+				    boolean hprint=false;
+		    	    boolean first=true;
+		    	    int grp=0;
+		    	    String grnm=null;
+			
+				while (rst1.next())/////////////////Product Master Loop Start Here///////////////////   
+				{
+					hprint=true;
+
+					if (first)
+					{
+						first=false;
+//			            txt1=(hq_code>0?"HQ-> ":"BRANCH-> ")+rst1.getString(25);
+//  			            txt5 = rst1.getString(23)+" TO "+rst1.getString(24);
+			           
+			            txt5 = "";
+
+					}
+
+		            
+
+
+				      trep+=rst1.getInt(12);
+
+				      
+					      montar = rst1.getDouble(6)/100000;
+					      monsal = rst1.getDouble(7)/100000;
+					      monlys = rst1.getDouble(8)/100000;
+ 					      cumtar+= rst1.getDouble(6)/100000;
+					      cumsal+= rst1.getDouble(7)/100000;
+					      lstsal+= rst1.getDouble(8)/100000;
+			      			        
+		 			if (montar!=0)
+		 				monach = (monsal/montar)*100;
+		 			if (montar!=0)
+		            	monach = (monsal/montar)*100;
+		            if (monlys!=0)
+		            	mongth = ((monsal/monlys)*100)-100;
+		 			if (cumtar!=0)
+		            	cumach = (cumsal/cumtar)*100;
+		            if (lstsal!=0)
+		            	cumgth = ((cumsal/lstsal)*100)-100;
+		            if (trep!=0)
+		               pmr = cumsal/trep;
+		            
+		            if (rst1.getInt(12)>0)
+			               monpmr = monsal/rst1.getInt(12);
+		            
+		           System.out.println("cumsal "+cumsal+" cumtar "+cumtar+" utype "+utype);
+		            
+/*		            if (monach>0)
+		            	monach=monach+.50;
+		            else
+		            {
+		               monach=((monach*-1)+.50)*-1;	
+		            }
+		            
+		            if (cumach>0)
+		            	cumach=cumach+.50;
+		            else
+		            {
+		               cumach=((cumach*-1)+.50)*-1;	
+		            }
+*/		            
+//		             imonsd=(int)monsal-(int)(montar+.50); 
+//		             icumsd=(long)cumsal-(long)(cumtar+.50);
+
+		             
+		             imonsd=monsal-montar; 
+		             icumsd=cumsal-cumtar;
+
+		             
+					 rfb = new MktFormBean();
+					 rfb.setMcode(trep);
+					 rfb.setMname(rst1.getString(5));
+					 rfb.setPack("");
+					 rfb.setNo_of_mr(rst1.getInt(12));
+					
+		             rfb.setColor(1);
+	        		 rfb.setDval3(montar);
+	        		 rfb.setDval4(monsal);
+	        		 rfb.setDval5(monlys);
+	        		 rfb.setDval6(monach);
+	        		 rfb.setDval2(mongth);
+	        		 rfb.setDval15(monpmr);
+	        		 rfb.setDval7(imonsd);
+	        		 rfb.setDval8(cumtar);
+	        		 rfb.setDval9(cumsal);
+	        		 rfb.setDval10(cumach);
+	        		 rfb.setDval11(icumsd);
+	        		 rfb.setDval12(lstsal);
+	        		 rfb.setDval13(cumsal-lstsal);
+	        		 rfb.setDval1(cumgth);
+	        		 rfb.setDval14(pmr);
+ 	 				 rfb.setNm3(txt1+txt2+txt5);
+ 	 				 rfb.setLupdate(txt6);
+ 	 				 
+	                 data.add(rfb);
+
+
+	
+///////////////////////////// grand total ke liye//////////////////////////
+		        	 tcumtar = tcumtar+rst1.getDouble(6)/100000;
+		             tcumsal = tcumsal+ rst1.getDouble(7)/100000;
+		             tlstsal = tlstsal+ rst1.getDouble(8)/100000;;		
+ 				     tmontar = tmontar+ rst1.getDouble(6)/100000;
+			         tmonsal = tmonsal+ rst1.getDouble(7)/100000;
+			         tlstmon = tlstmon+ rst1.getDouble(8)/100000;;		
+ 	 				
+			}
+
+		         cs.close();
+				 rst1.close();
+
+///////////////////////////// All Statment Close/////////////////////////////
+
+	 			if (tmontar!=0)
+	 				tmonach = (tmonsal/tmontar)*100;
+	 			if (tcumtar!=0)
+	            	tcumach = (tcumsal/tcumtar)*100;
+	            if (tlstmon!=0)
+	            	tmongth = ((tmonsal/tlstmon)*100)-100;
+
+	 			if (tlstsal!=0)
+	            	tcumgth = ((tcumsal/tlstsal)*100)-100;
+	            if (trep!=0)
+	            {
+	               tpmr = tcumsal/trep;
+	               monpmr=tmonsal/trep;
+	            }
+	            
+/*	            if (tmonach>0)
+	            	tmonach=tmonach+.50;
+	            else
+	            {
+	               tmonach=((tmonach*-1)+.50)*-1;	
+	            }
+	            
+	            if (tcumach>0)
+	            	tcumach=tcumach+.50;
+	            else
+	            {
+	               tcumach=((tcumach*-1)+.50)*-1;	
+	            }
+*/	            
+	          
+	            
+//                     timonsd=(int)((tmonsal-tmontar)+.50);
+//	             	 ticumsd=(long)((tcumsal-tcumtar)+.50);
+	             	 
+                     timonsd=tmonsal-tmontar;
+	             	 ticumsd=tcumsal-tcumtar;
+	             	 
+	             	 
+				     rfb = new MktFormBean();
+				     rfb.setMcode(trep);
+				     rfb.setNo_of_mr(trep);
+					 rfb.setMname("GRAND TOTAL");
+		             rfb.setColor(3);
+	        		 rfb.setDval3(tmontar);
+	        		 rfb.setDval4(tmonsal);
+				     rfb.setDval5(tlstmon);
+	        		 rfb.setDval6(tmonach);
+	        		 rfb.setDval2(tmongth);
+	        		 rfb.setDval15(monpmr);
+	        		 rfb.setDval7(timonsd);
+	        		 rfb.setDval8(tcumtar);
+
+	        		 rfb.setDval9(tcumsal);
+	        		 rfb.setDval10(tcumach);
+	        		 rfb.setDval11(ticumsd);
+	        		 rfb.setDval12(tlstsal);
+	        		 rfb.setDval13(tcumsal-tlstsal);
+	        		 rfb.setDval1(tcumgth);
+	        		 rfb.setDval14(tpmr);
+ 	 				 rfb.setNm3(txt1+txt2+txt5);
+ 	 				 data.add(rfb);
+ 	 				
+		} catch (Exception e) {
+			
+			System.out.println("========Exception in SQLForm4DAO.getNewForm4 " + e);
+			e.printStackTrace();
+		}
+		  finally 
+			{
+			  try
+				{
+	             if(rst1 != null){ rst1.close();}
+	             if(cs != null){ cs.close();}
+			     if(con != null){con.close();}
+				} 
+			  catch (SQLException e)
+				{
+				  System.out.println("-------------Exception in SQLForm4DAO.Connection.close "+e);
+				} 
+			}
+		return data;
+	}
+	
+	
+	
 //////////////////////////////////////////Branch ke liye End here/////////////////////////////////////			
 
 }

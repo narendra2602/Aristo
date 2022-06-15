@@ -1743,7 +1743,7 @@ public class SQLForm5DAO {
 					rfb.setPack("");
 					//rfb.setBr(t);
 					rfb.setUv(uv);
-					rfb.setColor(2);
+					rfb.setColor(3);
 
 					gsalval=0.00;
 

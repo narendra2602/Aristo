@@ -205,6 +205,7 @@ public class SQLHORepo1DAO {
 				t = trec.getInt(1)+1;
 				w= trec.getInt(1);
 			}
+			
 				gval = new double[t]; 
 				grval = new double[t]; 
 				depo = new int[w];
@@ -533,6 +534,7 @@ public class SQLHORepo1DAO {
 			        	 }
 			         }
 
+			        
 		        	 
 						if(k!=w)
 						{	

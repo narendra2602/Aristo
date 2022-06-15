@@ -96,7 +96,7 @@ public ActionForward NWListRepo1(ActionMapping mapping, ActionForm form, HttpSer
     int div_code = lfb.getDiv_code();
     int utype = Integer.parseInt(lfb.getOpt());
     int code = lfb.getCode();
-    System.out.println("depo code is "+code);
+    System.out.println("depo code is "+code+" div code "+div_code+" "+lfb.getDiv_code());
     
     HORepo1Form af= (HORepo1Form) form;
     
@@ -1313,6 +1313,124 @@ public ActionForward NEWListForm11(ActionMapping mapping, ActionForm form, HttpS
 }	
 ///////////////////////////////  Form No. 11 Action End here////////////////////////////////////////////////	
 
+/////////////////////////////// Option Form No. 4 start here//////////////////////////////////////////////	
+public ActionForward NWOptForm12(ActionMapping mapping, ActionForm form, HttpServletRequest req, HttpServletResponse res) throws Exception {
+
+System.out.println("Calleed List NWoptForm12 Action class and jsp option_form12new.jsp");       
+
+DataSource datasource = this.getDataSource(req,"userDB"); 
+Connection con=null;
+
+HttpSession session=req.getSession();
+LoginFormBean lfb=(LoginFormBean)session.getAttribute("Login");
+
+if (lfb==null)
+
+{
+return mapping.findForward("sfail");
+}
+
+con=datasource.getConnection();
+
+
+int uid = lfb.getId();
+int utype = Integer.parseInt(lfb.getOpt());
+String tp = lfb.getD_type();
+int depo_code=0;
+MktForm af= (MktForm) form;
+
+
+SQLOptDAO  ad=new SQLOptDAO(); 
+
+List branch = ad.getUserBranch(con, uid);
+LoginFormBean lf1 = (LoginFormBean) branch.get(0);
+
+if(branch!=null  && (branch.size()>1 || utype==5))
+{
+LoginFormBean lf = new LoginFormBean();
+lf.setDcode(0);
+lf.setDname("ALL"); 
+branch.add(0, lf);
+}
+
+if (req.getParameter("search")==null)
+depo_code=lf1.getDcode();
+else
+depo_code = Integer.parseInt(req.getParameter("search"));
+
+if(depo_code==0)
+depo_code=lf1.getDcode();
+
+con=datasource.getConnection();
+List hq = null;
+if(utype==4)
+hq = ad.getHQRepoNew(con, depo_code, tp,uid);
+else
+hq = ad.getAllrepo(con, depo_code, tp);
+
+af.setAlist(hq);    // set hq List in alist 
+af.setBlist(branch);//set branch list in bList so dont confuse...
+af.setYlist(lfb.getYlist());
+
+req.setAttribute("rlist", hq);
+if (req.getParameter("search")==null)
+return mapping.findForward("sucess");
+else
+return mapping.findForward("find");
+
+
+}
+
+/////////////////////////////// End of Option Form No.12 /////////////////////////////////////////////////		
+
+///////////////////////////////  Form No. 12 Action Start here////////////////////////////////////////////////	
+
+public ActionForward NWListForm12(ActionMapping mapping, ActionForm form, HttpServletRequest req, HttpServletResponse res) throws Exception {
+System.out.println("Calleed List NWListForm12 Action class");       
+
+DataSource datasource = this.getDataSource(req,"newDB"); 
+Connection con=null;
+HttpSession session=req.getSession();
+LoginFormBean lfb=(LoginFormBean)session.getAttribute("Login");
+
+if (lfb==null)
+{
+return mapping.findForward("sfail");
+}
+
+int uid=lfb.getId();
+int utype = Integer.parseInt(lfb.getOpt());
+
+MktForm af= (MktForm) form;
+
+int smon =1;
+int emon =12;
+int div_code = lfb.getDiv_code();
+int selectiontp = af.getSale_type(); // Branch/HQ
+
+int eyear=af.getEyear();
+int depo_code = af.getCode();
+int hq_code = 0;
+
+if(selectiontp==2)
+hq_code = af.getNo_of_mr();
+
+List repo=null;
+SQLForm4DAO rd = new SQLForm4DAO();       
+
+
+int i=1;
+con=datasource.getConnection();
+repo =rd.getNewBranch12(con,1,hq_code,smon,emon,eyear,depo_code,div_code,uid,utype);
+
+af.setRlist(repo);
+req.setAttribute("rlist", repo);
+
+
+return mapping.findForward("sucess");      
+
+}	
+///////////////////////////////  Form No. 12 Action End here////////////////////////////////////////////////	
 
 
 }

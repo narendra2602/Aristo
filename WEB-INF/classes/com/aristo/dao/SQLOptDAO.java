@@ -793,7 +793,7 @@ public class SQLOptDAO {
 
 /////////////////////////////// GET MSG Start here/////////////////////////////	
 	
-	public String getMsg(Connection con,String tp, int code) { 
+	public String getMsg(Connection con,String tp, int code,String opt) { 
 		 
         String data=null;
 		PreparedStatement ps2 =null;
@@ -803,16 +803,23 @@ public class SQLOptDAO {
     		Date ndate=new java.util.Date();	    	
     		Date ndt= new java.sql.Date (ndate.getTime());
       	    tblnm="msg_master";
-      	    String query2 = "Select msg from "+tblnm+"  where depo_code=? and type=? and date=? order by depo_code";
+//      	    String query2 = "Select msg from "+tblnm+"  where depo_code=? and type=? and date=? order by depo_code";
+      	    	String query2 ="Select distinct concat('Data is for your Information Only : Data May Change after Closing : Last Update date :',b.ter_name,'-',u.u_date) "+ 
+			  	" from upload u,a_branch08 b where u.depo_code=? and u.depo_code = b.depo_code " ;
+
+
+      	    
 		    ps2 = con.prepareStatement(query2);
 		    ps2.setInt(1,code);
-		    ps2.setString(2,tp);
-		    ps2.setDate(3,(java.sql.Date)ndt);
+//		    ps2.setString(2,tp);
+//		    ps2.setDate(3,(java.sql.Date)ndt);
 	        rst2 = ps2.executeQuery();
 	    	data="";
 	        if (rst2.next())
 				{
 		        	  data= rst2.getString(1); 
+		        	  if(opt.equalsIgnoreCase("4"))
+		        		  data="Data is for your Information Only : Data May Change after Closing";
   				} 
             ps2.close();
             rst2.close();
