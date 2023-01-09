@@ -1541,6 +1541,10 @@ public class SQLForm11DAO {
 		PreparedStatement ps1=null;
 		ResultSet rs1=null;
 
+		PreparedStatement ps12=null;
+		ResultSet rst12=null;
+
+		
 		CallableStatement cs=null;
 		ResultSet rst1=null;
 
@@ -1550,6 +1554,7 @@ public class SQLForm11DAO {
 			String txt1=null;
 			String txt4=null;
 			String txt5 =null;
+			String txt6 =null;
 			double tarval[];
 			double lysval[];
 			double saleval[];
@@ -1598,6 +1603,30 @@ public class SQLForm11DAO {
             rs1.close();
             ps1.close();
 
+            
+			String tp[]={"","A","T","G","","","","","","","M","","","","","","","","","","B","","","","","","","","","","F"};
+			
+			//////////////////////////////Date & time Updation ke liye////////////////////////////////			 
+			String query12 = "Select u_date,u_time  from aristo.upload where depo_code=? and substr(typ,1,1)=? ";
+			ps12 = con.prepareStatement(query12);
+			ps12.setInt(1,depo_code);
+			ps12.setString(2,tp[div_code]); 
+			rst12 = ps12.executeQuery();
+			
+			
+			if (rst12.next())
+			{
+				System.out.println("1 "+rst12.getString(1));
+			txt6= rst12.getString(1)+", TIME: "+rst12.getString(2);
+			}
+			
+			
+			rst12.close();
+			ps12.close();    
+			
+
+            
+            
 			
 			////////////////////////////////////////Branch Master Count/////////////////////////////////// 
 			String terrec = "Select count(*) from "+tblnm3+" where user_id=? and status=?";
@@ -1717,6 +1746,9 @@ public class SQLForm11DAO {
 			rfb.setMcode(w);
 			rfb.setUv(grp_code);
 			rfb.setNm1(0, "FS");
+			rfb.setLupdate(txt6);
+			System.out.println("txt6 inner "+txt6);
+
 			rfb.setDval1(ggval); 
 			data.add(rfb); 
 

@@ -102,13 +102,13 @@
           <%
  	      for(int j=0;j<x;j++)
            {
-             	if ((v==1)|| (v==3))
+             	if ((v==1)|| (v==3) || (v==9))
              	 {
                 %>	     
        <display:column property='<%="qty1["+j+"]"%>' title="<%=a[j]%>" format="{0,number,0}" headerClass="r" class="r"/>
                 <%   
                  }
-             	if ((v==7)|| (v==9))
+             	if ((v==7)|| (v==90))
              	 {
                 %>	     
        <display:column property='<%="qty1["+j+"]"%>' title="<%=a[j]%>" format="{0,number,0.0}" headerClass="r" class="r"/>

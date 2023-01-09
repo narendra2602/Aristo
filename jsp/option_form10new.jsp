@@ -85,6 +85,16 @@ function enableCombo()
 <p>&nbsp;</p>
 <table border="0" align="center" cellpadding="0" cellspacing="0" class="table2">
 				  <th colspan="5">Group Wise-Product Wise Trend</th>
+
+
+                  <tr>
+					<td style="padding-left: 85px;"><html:radio property="uv"  value="1"/>Unit </td>
+                    <td><html:radio property="uv"  value="2"/>Value &nbsp;&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+			      </tr>
+
               
 				 <tr>
 					<td style="padding-left: 85px;"><html:radio property="rep_type"  value="1" styleId="brCheck" onclick="enableCombo();"/>Branch </td>

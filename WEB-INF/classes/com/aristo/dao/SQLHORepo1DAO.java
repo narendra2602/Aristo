@@ -153,6 +153,7 @@ public class SQLHORepo1DAO {
             int t=0;
             int w=0;
 
+            System.out.println("valu eof tuv "+tuv);
             String branchname = "Select depo_name from branch_comp where depo_code=? ";
             ps1=con.prepareStatement(branchname);
             ps1.setInt(1, depo_code);
@@ -169,7 +170,7 @@ public class SQLHORepo1DAO {
              
             
 //////////////////////////////////////// Branch Master Count/////////////////////////////////// 
-            String terrec = "Select count(*) from "+tblnm3+" where user_id=? and status=?";
+            String terrec = "Select count(*) from "+tblnm3+" where user_id=? and status=? ";
             if(div_code>=12 && div_code<=16)
                  terrec = "Select count(*) from "+tblnm3+" where user_id=? and status=? and depo_code=32";
             else if(div_code!=3)
@@ -205,6 +206,8 @@ public class SQLHORepo1DAO {
 				t = trec.getInt(1)+1;
 				w= trec.getInt(1);
 			}
+			
+			System.out.println("value of t and w "+t+"  "+w+" utype "+utype);
 			
 				gval = new double[t]; 
 				grval = new double[t]; 

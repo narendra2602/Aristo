@@ -2229,7 +2229,7 @@ public class SQLForm5DAO {
 	
 
 	////////////////////////////////////////////Branch ////////////////////////////////////////////////////	
-	public List getNewBranch10(Connection con, int grp_code, int smon, int emon,int eyear,int depo_code,int div_code,int loginid, int utype,int hq_code) { 
+	public List getNewBranch10(Connection con, int grp_code, int smon, int emon,int eyear,int depo_code,int div_code,int loginid, int utype,int hq_code,int uv) { 
 		
 		MktFormBean rfb=null;
 		PreparedStatement ps=null;
@@ -2282,7 +2282,9 @@ public class SQLForm5DAO {
 			 
 //			txt1=depo_code==0?" Branch Wise ":" HQ Wise ";
 
-			txt4=" Trend ";
+			txt4=" Trend Unit Wise";
+			if(uv==2)
+				txt4=" Trend Value Wise";
 			
 			
 			int t=13;
@@ -2427,7 +2429,7 @@ public class SQLForm5DAO {
 					rfb.setColor(3); 
 					rfb.setNm3(grnm+txt1+txt4);
 					rfb.setMcode(w);
-					rfb.setUv(2);
+					rfb.setUv(uv);
 					rfb.setNm1(0, "FS");
 					rfb.setDval0(w, ggval);
 					rfb.setNm9(w, "Total");
@@ -2591,12 +2593,23 @@ public class SQLForm5DAO {
 					}
 				}
 
-
-				saleval[k]=rst1.getDouble(11);
-				tarval[k]=rst1.getDouble(12);
-				lysval[k]=rst1.getDouble(13);
-				nrep[k]=rst1.getInt(14);
-				incrval[k]=rst1.getDouble(18);
+				if(uv==1) // unit wise
+				{
+					saleval[k]=rst1.getDouble(19);
+					tarval[k]=rst1.getDouble(20);
+					lysval[k]=rst1.getDouble(21);
+					nrep[k]=rst1.getInt(14);
+					incrval[k]=rst1.getDouble(22);
+				}
+				else if(uv==2) // value wise
+				{
+					saleval[k]=rst1.getDouble(11);
+					tarval[k]=rst1.getDouble(12);
+					lysval[k]=rst1.getDouble(13);
+					nrep[k]=rst1.getInt(14);
+					incrval[k]=rst1.getDouble(18);
+				}
+				
 				k++;
 
 
@@ -2623,7 +2636,7 @@ public class SQLForm5DAO {
 			rfb.setColor(3);
 			rfb.setNm3(txt1+grnm+txt4);
 			rfb.setMcode(w);
-			rfb.setUv(2);
+			rfb.setUv(uv);
 			rfb.setNm1(0, "FS");
 			rfb.setDval0(w, ggval);
 			rfb.setNm9(w, "Total");
@@ -2797,12 +2810,15 @@ public class SQLForm5DAO {
 		PreparedStatement ps1=null;
 		ResultSet rs1=null;
 
+		PreparedStatement ps12=null;
+		ResultSet rst12=null;
 		
 		List<MktFormBean> data = new ArrayList<MktFormBean>();
 		try {     
 			String txt1=null;
 			String txt2=null;
 			String txt4=null;
+			String txt6=null;
 			int mcode[];
 			String month_name[];
 			int trep=0;
@@ -2812,6 +2828,26 @@ public class SQLForm5DAO {
 			double saleval[];
 			double incrval[];
 			int nrep[];
+
+			
+			String tp[]={"","A","T","G","","","","","","","M","","","","","","","","","","B","","","","","","","","","","F"};
+			
+//////////////////////////////Date & time Updation ke liye////////////////////////////////			 
+String query12 = "Select u_date,u_time  from aristo.upload where depo_code=? and substr(typ,1,1)=? ";
+ps12 = con.prepareStatement(query12);
+ps12.setInt(1,depo_code);
+ps12.setString(2,tp[div_code]); 
+rst12 = ps12.executeQuery();
+
+
+if (rst12.next())
+txt6= rst12.getString(1)+", TIME: "+rst12.getString(2);
+
+
+
+rst12.close();
+ps12.close();    
+
 
 			
 			String procedureWithParameters="{call web_report_br_hq_trend(?,?,?,?,?,?,?)}";
@@ -2966,6 +3002,9 @@ public class SQLForm5DAO {
 					rfb.setDval0(w, ggval);
 					rfb.setNm9(w, "Total");
 					//rfb.setDval1(ggval); 
+					rfb.setLupdate(txt6);
+					System.out.println("txt6 inner "+txt6);
+
 					data.add(rfb); 
 
 
@@ -3156,6 +3195,7 @@ public class SQLForm5DAO {
 			}
 			rfb.setColor(3);
 			rfb.setNm3(txt1+txt4);
+			rfb.setLupdate(txt6);
 			rfb.setMcode(w);
 			rfb.setUv(2);
 			rfb.setNm1(0, "FS");

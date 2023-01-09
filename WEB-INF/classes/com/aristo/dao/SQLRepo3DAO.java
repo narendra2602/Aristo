@@ -8,7 +8,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.aristo.valueobject.Repo2FormBean; 
+import com.aristo.valueobject.Repo13FormBean;
+import com.aristo.valueobject.Repo2FormBean;
 
 public class SQLRepo3DAO {
 
@@ -669,6 +670,8 @@ public class SQLRepo3DAO {
             float gsalval=0f;
             float gesalval=0f;
             float gbsalval=0f;
+            float gspsalval=0f;
+            float gotsalval=0f;
             
             if (smon>emon)
             	emon=smon;
@@ -732,7 +735,9 @@ public class SQLRepo3DAO {
 	            	rfb.setVal2(rst2.getDouble(6));
 	            	rfb.setVal3(rst2.getFloat(7));
 	            	rfb.setVal4(rst2.getFloat(8));
-	            	rfb.setVal5(rst2.getFloat(9));
+	            	rfb.setVal5(rst2.getFloat(14));
+	            	rfb.setVal6(rst2.getFloat(12));  // spoiled
+	            	rfb.setVal7(rst2.getFloat(13));  // others
 	            	rfb.setNm3(txt1+txt5); 
 	            	rfb.setLupdate(txt6);
 
@@ -742,6 +747,8 @@ public class SQLRepo3DAO {
 	            	gsalval = gsalval+rst2.getFloat(6);
 	            	gesalval = gesalval+rst2.getFloat(7);
 	            	gbsalval = gbsalval+rst2.getFloat(8);
+	            	gspsalval = gspsalval+rst2.getFloat(12);
+	            	gotsalval = gotsalval+rst2.getFloat(13);
 
 
 	            	data.add(rfb); 				
@@ -751,11 +758,13 @@ public class SQLRepo3DAO {
 	            rfb.setNm2("TOTAL : "); 
 	            rfb.setVal2(gsalval);
 	            rfb.setVal3(gesalval); 
+	            rfb.setVal6(gspsalval); 
+	            rfb.setVal7(gotsalval); 
 	            if(repo_type==1)
 	            	rfb.setVal4((gesalval/gsalval)*100);
 	            else
 	            	rfb.setVal4(gbsalval);
-	            rfb.setVal5(gsalval+gesalval+gbsalval);
+	            rfb.setVal5(gsalval+gesalval+gbsalval+gspsalval+gotsalval);
 	            data.add(rfb); 				
 			
 		} catch (Exception e) { 
@@ -776,5 +785,152 @@ public class SQLRepo3DAO {
 		
 		return data;
 	}
+
+	public List getNewiqvia(Connection con, int smon,int emon,int eyear,int depo_code,int div_code,int uid,int utype,int repo_type) { 
 		
+		Repo13FormBean rfb;
+        ResultSet rst2=null;
+
+		CallableStatement cs=null;
+		PreparedStatement ps1=null;
+		ResultSet rs1=null;
+
+		PreparedStatement ps2=null;
+		ResultSet rs2=null;
+        
+ 		
+		List<Repo13FormBean> data = new ArrayList<Repo13FormBean>();
+		try {     
+            String txt1=null;
+            String txt5 =null; 
+            String txt6=null;
+            String mnthname=null;
+            int cyear=0;
+            float gsalval=0f;
+            float gesalval=0f;
+            float gbsalval=0f;
+            float gspsalval=0f;
+            float gotsalval=0f;
+            
+            if (smon>emon)
+            	emon=smon;
+
+			String tp[]={"","MF","TF","GENETICA","","","","","","","MF2","","","","","","","","","","MF3","","","","","","","","","","MF4"};
+
+
+			
+			String procedureWithParameters="{call iqvia_proc(?,?,?)}";
+
+			
+			
+            String monthname = "Select mnth_code,concat(UPPER(mnth_name),'-',mnth_year),mnth_year from monthfl where mkt_year=? and mnth_ord=? ";
+            ps2=con.prepareStatement(monthname);
+            ps2.setInt(1, eyear);
+            ps2.setInt(2, smon);
+            rs2=ps2.executeQuery();
+            if(rs2.next())
+            {
+            	smon=rs2.getInt(1);
+            	mnthname=rs2.getString(2);
+            	cyear=rs2.getInt(3);
+            }
+           
+            rs2.close();
+            ps2.close();
+			
+    	    
+
+			
+            String branchname = "Select ter_name from a_branch08 where depo_code=? ";
+            ps1=con.prepareStatement(branchname);
+            ps1.setInt(1, depo_code);
+            rs1=ps1.executeQuery();
+            if(rs1.next())
+            {
+            	txt1=tp[div_code]+" PRODUCT MATRIX "+rs1.getString(1)+ " BRANCH - "+mnthname+" - TOP 10";
+
+            }
+            else
+            	txt1=tp[div_code]+" PRODUCT MATRIX "+ " ALL INDIA - "+mnthname+" - TOP 10";
+           
+            rs1.close();
+            ps1.close();
+
+            
+             
+	            
+	            cs = con.prepareCall(procedureWithParameters);
+				cs.setInt(1, div_code);
+				cs.setInt(2, depo_code);
+				cs.setInt(3, smon);
+		        rst2 = cs.executeQuery();
+
+		        boolean first=true;
+	            while (rst2.next())
+				{
+	            	rfb = new Repo13FormBean();
+	            	rfb.setNm3(txt1); 
+	            	rfb.setCyear(cyear);
+	            	rfb.setLyear(cyear-1);
+	            	rfb.setColor(rst2.getString(1).equalsIgnoreCase("G")?1:0);
+	            	rfb.setTyp(rst2.getString(1));
+	            	rfb.setMolecule(rst2.getString(2));
+	            	rfb.setRl(rst2.getInt(3));
+	            	rfb.setRc(rst2.getInt(4));
+	            	rfb.setProduct(rst2.getString(5));
+	            	rfb.setCompany(rst2.getString(6));
+	            	if(rst2.getString(6).contains("ARISTO"))
+	            		rfb.setColor(2);
+	            	rfb.setLaunch(rst2.getInt(7));
+	            	rfb.setVall(rst2.getDouble(8));
+	            	rfb.setValc(rst2.getDouble(9));
+	            	rfb.setMsl(rst2.getDouble(10));
+	            	rfb.setMsc(rst2.getDouble(11));
+	            	rfb.setGthl(rst2.getDouble(12));
+	            	rfb.setGthc(rst2.getDouble(13));
+	            	rfb.setValql(rst2.getDouble(14));
+	            	rfb.setValq2(rst2.getDouble(15));
+	            	rfb.setValq3(rst2.getDouble(16));
+	            	rfb.setValq4(rst2.getDouble(17));
+	            	rfb.setMsq1(rst2.getDouble(18));
+	            	rfb.setMsq2(rst2.getDouble(19));
+	            	rfb.setMsq3(rst2.getDouble(20));
+	            	rfb.setMsq4(rst2.getDouble(21));
+	            	rfb.setGthql(rst2.getDouble(22));
+	            	rfb.setGthq2(rst2.getDouble(23));
+	            	rfb.setGthq3(rst2.getDouble(24));
+	            	rfb.setGthq4(rst2.getDouble(25));
+
+
+	            	
+
+
+	            	data.add(rfb); 				
+				}
+	            
+			
+		} catch (Exception e) { 
+			
+			System.out.println("========Exception in SQLRepo3DAO.getNewiqvia " + e);
+		}
+		finally 
+		{
+		try {
+           if(rst2 != null){ rst2.close();}
+           if(cs != null){cs.close();}
+           if(rs2 != null){ rs2.close();}
+           if(ps2 != null){ps2.close();}
+           if(rs1 != null){ rs1.close();}
+           if(ps1 != null){ps1.close();}
+           if(con != null){con.close();}
+			} 
+		catch (SQLException e) {
+				System.out.println("--Exception in SQLRepo3DAO.Connection.close "+e);
+			  }
+		}		
+		
+		return data;
+	}
+	
+	
 } 

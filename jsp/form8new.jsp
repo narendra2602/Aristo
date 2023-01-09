@@ -58,6 +58,8 @@ String css1 = (String) session.getAttribute("css");
 		<display:column property="val2" title="SALEABLE" format="{0,number,0.00}" headerClass="r" class="r"/> 
 		<display:column property="val3" title="EXPIRY" format="{0,number,0.00}" headerClass="r" class="r"/> 
 		<display:column property="val4" title="BREAKAGE" format="{0,number,0.00}" headerClass="r" class="r" />
+		<display:column property="val6" title="SPOILED" format="{0,number,0.00}" headerClass="r" class="r" />
+		<display:column property="val7" title="OTHERS" format="{0,number,0.00}" headerClass="r" class="r" />
 		<display:column property="val5" title="TOTAL" format="{0,number,0.00}" headerClass="r" class="r" />
 	</display:table>
 </div>	

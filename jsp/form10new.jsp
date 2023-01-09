@@ -92,7 +92,8 @@ String css1 = (String) session.getAttribute("css");
 				    if (tl==1) 
 					 {
                 %> 	     
-                     <display:column property='<%="qty0["+g+"]"%>' title="<%=a[g]%>" headerClass="r" class="r"/>
+					 <display:column property='<%="dval0["+g+"]"%>' title="<%=a[g]%>" format="{0,number,0}" headerClass="r" class="r"/>
+
 					 <%}
 					   else if (tl==2) 
 					   {

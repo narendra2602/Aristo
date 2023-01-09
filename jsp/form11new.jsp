@@ -82,7 +82,7 @@ String css1 = (String) session.getAttribute("css");
    <display:table id="data"  name="requestScope.rlist" requestURI="./NWListForm11.do?actionRequested=NWListForm11" pagesize="28"  export="true" decorator="dyndecorator" >
 
        <display:caption media="html"> <div style="font-size:18px" align="left"><strong><br/><%=whead%></strong></div> </display:caption>
-       <display:caption media="excel">BRANCH NAME: <%=ak%>, <%=whead%>,  LAST UPDATE: <%=lupdate%></display:caption>
+       <display:caption media="excel"> <%=whead%>,  LAST UPDATE: <%=lupdate%></display:caption>
 
         <display:column property='<%="nm1[0]"%>' title="NAME" />
          <%
